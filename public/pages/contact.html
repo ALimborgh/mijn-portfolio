@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriaen Limborgh - Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Adriaen Limborgh</h1>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">Over Mij</a></li>
+                <li><a href="projects.html">Projecten</a></li>
+                <li><a href="resume.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact mij</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Over Mij</h3>
+                <p>Welkom op mijn website! Ik ben een Fullstack Developer met een passie voor het oplossen van complexe problemen.</p>
+                <a href="about.html" class="footer-link">Lees meer</a>
+            </div>
+            <div class="footer-links">
+                <h3>Snelkoppelingen</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">Over Mij</a></li>
+                    <li><a href="projects.html">Projecten</a></li>
+                    <li><a href="resume.html">CV</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Volg Mij</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><img src="../images/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ALimborgh" target="_blank"><img src="../images/github-6980894_1280.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span id="year"></span> Alle rechten voorbehouden.</p>
+        </div>
+    </footer> 
+    <script src="js/script.js"></script>
+</body>
+</html>
