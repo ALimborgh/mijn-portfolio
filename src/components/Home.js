@@ -1,5 +1,6 @@
 // src/components/Home.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
       <section className="hero">
         <h2>Welkome op mijn persoonlijke pagina</h2>
         <p>Hallo, ik ben Adriaen Limborgh, een gepassioneerde fullstack developer met een talent voor het oplossen van complexe problemen. Ontdek mijn projecten, leer meer over mij of neem contact met mij op!</p>
-        <a href="/projects" className="cta-button">Bekijk Mijn Projecten</a>
+        <Link to="/projects">Bekijk mijn projecten</Link>
       </section>
 
       <section className="featured-projects">
@@ -24,12 +25,12 @@ const Home = () => {
 
       <section className="about-me">
         <h2>Over mij</h2>
-        <p>Ik ben een enthousiaste professional met een passie voor technologie en probleemoplossing. <a href="/about">Lees meer over mij</a>.</p>
+        <p>Ik ben een enthousiaste professional met een passie voor technologie en probleemoplossing. <Link to="/about">Lees over mij</Link></p>
       </section>
 
       <section className="resume">
         <h2>Bekijk Mijn CV</h2>
-        <p>Benieuwd naar mijn ervaring en vaardigheden? <a href="/resume">Bekijk mijn CV</a> voor meer informatie.</p>
+        <p>Benieuwd naar mijn ervaring en vaardigheden? <Link to="/resume">Bekijk mijn CV</Link> voor meer informatie.</p>
       </section>
     </main>
   );
