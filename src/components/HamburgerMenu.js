@@ -17,6 +17,10 @@ const HamburgerMenu = () => {
     }
   };
 
+  const handleLinkClick = () => {
+    setMenuVisible(false); // Close the menu when a link is clicked
+  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -38,11 +42,11 @@ const HamburgerMenu = () => {
       <button className={`hamburger-menu__button ${menuVisible ? 'hide' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation">☰</button>
       <nav id="navMenu" className={`hamburger-menu__nav ${menuVisible ? 'hamburger-menu__nav--show' : ''}`}>
         <ul className="hamburger-menu__list">
-          <li className="hamburger-menu__item"><Link to="/" className="hamburger-menu__link">Home</Link></li>
-          <li className="hamburger-menu__item"><Link to="/about" className="hamburger-menu__link">Over Mij</Link></li>
-          <li className="hamburger-menu__item"><Link to="/projects" className="hamburger-menu__link">Projecten</Link></li>
-          <li className="hamburger-menu__item"><Link to="/resume" className="hamburger-menu__link">CV</Link></li>
-          <li className="hamburger-menu__item"><Link to="/contact" className="hamburger-menu__link">Contact</Link></li>
+          <li className="hamburger-menu__item"><Link to="/" onClick={handleLinkClick} className="hamburger-menu__link">Home</Link></li>
+          <li className="hamburger-menu__item"><Link to="/about" onClick={handleLinkClick} className="hamburger-menu__link">Over Mij</Link></li>
+          <li className="hamburger-menu__item"><Link to="/projects" onClick={handleLinkClick} className="hamburger-menu__link">Projecten</Link></li>
+          <li className="hamburger-menu__item"><Link to="/resume" onClick={handleLinkClick} className="hamburger-menu__link">CV</Link></li>
+          <li className="hamburger-menu__item"><Link to="/contact" onClick={handleLinkClick} className="hamburger-menu__link">Contact</Link></li>
         </ul>
       </nav>
     </>
