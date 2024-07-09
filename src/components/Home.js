@@ -22,11 +22,11 @@ const Home = () => {
       <section className="featured-projects">
         <h2>Featured Projects</h2>
         <div className="card">
-          <h3><a href="/projects#project1">Project 1</a></h3>
+          <h3>Project 1</h3>
           <p>Een korte omschrijving van Project 1.</p>
         </div>
         <div className="card">
-          <h3><a href="/projects#project2">Project 2</a></h3>
+          <h3>Project 2</h3>
           <p>Een korte omschrijving van Project 2.</p>
         </div>
       </section>
