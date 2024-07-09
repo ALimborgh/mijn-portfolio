@@ -1,0 +1,11 @@
+/* src/assets/css/FooterYear.css */
+
+#year {
+    font-family: 'Montserrat', sans-serif; /* Modern font voor consistentie */
+    font-size: 1rem; /* Standaard fontgrootte */
+    color: #444444; /* Donkergrijze tekstkleur */
+    text-align: center; /* Center de tekst */
+    padding: 1rem 0; /* Padding boven en onder voor wat ruimte */
+    margin-top: 2rem; /* Bovenmarge voor wat ruimte van de rest van de inhoud */
+    border-top: 1px solid #ddd; /* Bovenste rand voor een subtiele scheiding */
+}

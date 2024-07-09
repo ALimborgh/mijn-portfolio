@@ -1,15 +1,18 @@
 import { useEffect } from 'react';
+import '../assets/css/FooterYear.css';
 
 const FooterYear = () => {
-  useEffect(() => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  useEffect(() => {  
     const yearElement = document.getElementById('year');
     if (yearElement) {
       yearElement.textContent = `Adriaen Limborgh © ${currentYear}`;
     }
-  }, []);
+  }, [currentYear]);
 
-  return null;
+  return (
+    <div id="year">Adriaen Limborgh © {currentYear} </div>
+  );
 };
 
 export default FooterYear;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FooterYear from './FooterYear';
 import '../assets/css/Footer.css';
 
 const Footer = () => {
@@ -49,7 +50,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p><span id="year"></span> Alle rechten voorbehouden.</p>
+        <FooterYear/>
+        <p>Alle rechten voorbehouden.</p>
       </div>
     </footer>
   );
