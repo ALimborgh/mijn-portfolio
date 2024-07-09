@@ -58,3 +58,15 @@ footer {
     font-size: 0.75rem; /* Kleinere tekstgrootte voor footer-bottom op kleine schermen */
   }
 }
+
+@media (min-width: 992px) {
+  .footer-content {
+    flex-direction: row; /* Plaats secties naast elkaar op grotere schermen */
+    justify-content: space-between; /* Verdeel de ruimte tussen de secties */
+    align-items: flex-start; /* Zorgt ervoor dat alle rijen op dezelfde hoogte beginnen */
+  }
+
+  .footer-about, .footer-links, .footer-social {
+    min-width: 200px; /* Grotere min-width voor grotere schermen */
+  }
+}
