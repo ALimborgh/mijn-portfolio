@@ -1,41 +1,48 @@
 /* src/assets/css/Footer.css */
 
-.footer-content {
+/* src/assets/css/Footer.css */
+
+/* Footer-stijlen */
+footer {
+    background-color: #2C2C2C; /* Donkergrijs voor de footer */
+    color: #FFFFFF; /* Witte tekst in de footer */
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-}
-
-.footer-about, .footer-links, .footer-social {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .footer-about, .footer-links, .footer-social {
     flex: 1;
     min-width: 200px;
-}
-
-.footer-about p {
-    margin-bottom: 1rem;
-}
-
-.footer-links ul {
-    padding: 0;
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-social img {
-    width: 24px;
-    height: 24px;
+  }
+  
+  .footer-link, .footer-links a {
+    color: #D9534F; /* Primair Rood voor links */
+    text-decoration: none;
+  }
+  
+  .footer-link:hover, .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social media iconen */
+  .social-links img {
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
-}
-
-.footer-bottom {
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1rem;
-}
-
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
 /* Media Queries voor Responsiveness */
 @media (max-width: 992px) {
     .footer-content {
