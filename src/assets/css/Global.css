@@ -237,6 +237,9 @@ footer a:hover {
 
 .footer-links ul li {
     margin-bottom: 0.5rem;
+    background-color: #2C2C2C; /* Donker Grijs voor links */
+    border-color: #2C2C2C; /* Donker Grijs voor links */
+    padding: 0.5rem;
 }
 
 /* Social Media Icon Animaties */
