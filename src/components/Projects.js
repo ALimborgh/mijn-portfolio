@@ -1,23 +1,23 @@
 // src/components/Projects.js
 import React from 'react';
 import '../assets/css/Projects.css';
+import projectsData from '../data/ProjectsData';
 
 const Projects = () => {
   return (
     <main>
       <h1>Projects</h1>
-      
-      <div className="project">
-        <h2>Project 1</h2>
-        <p>Description of Project 1. This project demonstrates skills in HTML, CSS, and JavaScript.</p>
-      </div>
-      
-      <div className="project">
-        <h2>Project 2</h2>
-        <p>Description of Project 2. This project showcases backend development with Python and Django.</p>
-      </div>
-
-      {/* Add more projects as needed */}
+      {projectsData.map((project) => (
+        <div key={project.id} className="project">
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+          <p>Technologies: {project.technologies.join(', ')}</p>
+          {project.Toepassingen && (
+            <p>Toepassingen: {project.Toepassingen.join(', ')}</p>
+          )}
+          <img src={project.imagePaths} alt={project.title} />
+        </div>
+      ))}
     </main>
   );
 }
