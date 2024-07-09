@@ -8,7 +8,6 @@
     font-size: 2rem;
     cursor: pointer;
     color: #D9534F; /* Primair Rood voor hamburger knop */
-    transition: color 0.3s ease;
     position: fixed; /* Vaste positie aan de rechterkant */
     top: 20px; /* Afstand van de bovenkant van het scherm */
     right: 20px; /* Afstand van de rechterkant van het scherm */
@@ -27,21 +26,16 @@
     top: 60px; /* Onder de hamburger knop */
     right: 0;
     background-color: #ffffff; /* Wit voor de achtergrond van het menu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 1rem;
     width: 250px; /* Breedte van het menu */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lichtere schaduw voor minder diepte */
     z-index: 1000;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(-10px);
 }
 
 /* Show het menu als het zichtbaar is */
 .hamburger-menu__nav.hamburger-menu__nav--show {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Menu lijst */
@@ -63,7 +57,6 @@
     display: block;
     padding: 0.5rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hover en focus voor links in het menu */
@@ -105,8 +98,6 @@
         background-color: transparent;
         padding: 0;
         width: auto;
-        opacity: 1;
-        transform: none;
     }
 
     .hamburger-menu__list {
@@ -126,5 +117,25 @@
     .hamburger-menu__link:focus {
         background-color: transparent; /* Geen achtergrondkleur op grotere schermen */
         color: #D9534F; /* Primair Rood bij hover en focus op grotere schermen */
+    }
+}
+
+/* Extra media queries voor kleinere schermen */
+
+/* Extra klein scherm (mobiel) */
+@media (max-width: 480px) {
+    .hamburger-menu__button {
+        font-size: 1.5rem; /* Kleinere hamburgerknop */
+        top: 15px; /* Verminder afstand van de bovenkant */
+        right: 15px; /* Verminder afstand van de rechterkant */
+    }
+
+    .hamburger-menu__nav {
+        width: 200px; /* Verklein de breedte van het menu */
+        top: 50px; /* Verminder afstand van de hamburger knop */
+    }
+
+    .hamburger-menu__item {
+        margin-bottom: 0.5rem;
     }
 }

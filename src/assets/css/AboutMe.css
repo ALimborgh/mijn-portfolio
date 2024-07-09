@@ -4,24 +4,73 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding: 1.5rem; /* Reduceer padding voor eenvoudiger ontwerp */
+    background-color: #F8F9FA; /* Lichte achtergrondkleur voor contrast */
+    border-radius: 8px; /* Minder ronde hoeken voor een subtiele uitstraling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
 
+/* Verwijderd hover-effect op about-content */
 .profile-img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
+    transition: transform 0.2s ease; /* Verkorte overgangstijd voor hover-effect */
+}
+
+/* Verwijderd hover-effect op profile-img */
+.about-text {
+    max-width: 600px; /* Beperk de breedte van de tekst voor betere leesbaarheid */
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor kopteksten */
+    font-size: 2rem;
+    color: #D9534F; /* Rood voor de koptekst */
+    margin-bottom: 1rem;
+    text-align: center; /* Centreer de koptekst */
 }
 
 .about-text p {
+    color: #5F5F5F; /* Blauwgrijs voor tekst */
     margin-bottom: 1rem;
+    line-height: 1.6; /* Verhoog de leesbaarheid van de tekst */
+    font-size: 1rem; /* Zorg ervoor dat de tekst goed leesbaar is */
+    text-align: left; /* Tekst uitgelijnd naar links */
+}
+
+.about-text a {
+    color: #D9534F; /* Rood voor links */
+    font-weight: bold; /* Maak links vetgedrukt */
+    text-decoration: none; /* Verwijder standaard onderstreping */
+}
+
+/* Hover en focus voor links */
+.about-text a:hover,
+.about-text a:focus {
+    color: #C9302C; /* Donkerder Rood bij hover en focus */
+    text-decoration: underline; /* Onderstreep links bij hover en focus */
 }
 
 /* Media Queries voor Responsiveness */
+@media (max-width: 1024px) {
+    .about-content {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         align-items: center;
+        padding: 0.75rem;
     }
 
     .profile-img {
@@ -29,7 +78,26 @@
         height: 120px;
     }
 
+    .about-text {
+        max-width: 100%;
+    }
+
     .about-text p {
         text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem; /* Kleinere koptekst op kleine schermen */
+    }
+
+    .about-text p {
+        font-size: 0.875rem; /* Kleinere tekst voor betere weergave op kleine schermen */
     }
 }

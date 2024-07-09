@@ -1,63 +1,81 @@
 /* src/assets/css/Footer.css */
 
-/* src/assets/css/Footer.css */
-
 /* Footer-stijlen */
 footer {
-    background-color: #2C2C2C; /* Donkergrijs voor de footer */
-    color: #FFFFFF; /* Witte tekst in de footer */
-    padding: 2rem 1rem;
-    font-family: Arial, sans-serif;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .footer-about, .footer-links, .footer-social {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .footer-link, .footer-links a {
-    color: #D9534F; /* Primair Rood voor links */
-    text-decoration: none;
-  }
-  
-  .footer-link:hover, .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Social media iconen */
-  .social-links img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
+  background-color: #2C2C2C; /* Donkergrijs voor de footer */
+  color: #FFFFFF; /* Witte tekst in de footer */
+  padding: 1.5rem 1rem; /* Verlaagde padding voor een subtielere uitstraling */
+  font-family: Arial, sans-serif;
+  border-top: 3px solid #D9534F; /* Dunner Rood accent bovenaan de footer */
+}
+
+/* Footer Content Styling */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Algemene styling voor footer-secties */
+.footer-about, .footer-links, .footer-social {
+  flex: 1;
+  min-width: 150px; /* Kleinere min-width voor kleinere schermen */
+  margin-bottom: 1rem; /* Ruimte tussen secties */
+}
+
+/* Footer Links */
+.footer-link, .footer-links a {
+  color: #D9534F; /* Primair Rood voor links */
+  text-decoration: none;
+}
+
+/* Hover effect voor links */
+.footer-link:hover, .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Social Media Iconen */
+.social-links img {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px; /* Kleinere marge tussen iconen */
+  transition: none; /* Geen overgangseffecten voor hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem; /* Kleinere tekstgrootte voor de footer-bottom */
+}
+
 /* Media Queries voor Responsiveness */
 @media (max-width: 992px) {
-    .footer-content {
-        flex-direction: column;
-    }
+  .footer-content {
+    flex-direction: column;
+    align-items: center; /* Centreer secties in de kolom lay-out */
+  }
 
-    .footer-about, .footer-links, .footer-social {
-        min-width: 100%;
-        text-align: center;
-    }
+  .footer-about, .footer-links, .footer-social {
+    min-width: 100%;
+    text-align: center; /* Centreer de tekst in de secties */
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center; /* Centreer social media iconen */
+  }
 }
 
 @media (max-width: 576px) {
-    .footer-social img {
-        width: 20px;
-        height: 20px;
-    }
+  .social-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px; /* Nog kleinere marge tussen iconen */
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem; /* Nog kleinere tekstgrootte voor footer-bottom */
+  }
 }

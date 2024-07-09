@@ -1,26 +1,121 @@
 /* src/assets/css/Header.css */
 
+/* Header Stijlen */
 header {
     background-color: #2C2C2C; /* Donker Grijs voor header */
     padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Voor absolute positionering van menu */
+    z-index: 1000; /* Zorg ervoor dat de header boven andere elementen staat */
 }
 
+/* Header Titel */
 header h1 {
     font-size: 2rem;
     color: #fff; /* Witte tekst */
+    font-family: 'Montserrat', sans-serif; /* Montserrat voor een moderne uitstraling */
+    transition: color 0.3s ease; /* Overgangseffect voor hover */
 }
 
+header h1:hover {
+    color: #D9534F; /* Rood bij hover */
+}
+
+/* Navigatie Menu */
+nav {
+    display: flex;
+    gap: 1.5rem; /* Ruimte tussen navigatielinks */
+}
+
+nav a {
+    color: #fff; /* Witte tekstkleur voor links */
+    text-decoration: none; /* Verwijder onderstreping */
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Overgangseffecten voor hover */
+}
+
+nav a:hover {
+    color: #D9534F; /* Rood bij hover */
+    border-bottom: 2px solid #D9534F; /* Rood accent onder de link bij hover */
+}
+
+/* Hamburger Menu (voor mobiel) */
+.hamburger {
+    display: none; /* Verborgen op grotere schermen */
+    flex-direction: column;
+    gap: 4px; /* Ruimte tussen de lijnen van de hamburger */
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Witte kleur voor de lijnen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Overgangseffecten voor hamburger animatie */
+}
+
+/* Open Menu animatie */
+.hamburger.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none; /* Verborgen op grotere schermen */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #2C2C2C; /* Zelfde donkergrijze achtergrond als header */
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-menu a {
+    color: #fff; /* Witte tekstkleur voor links */
+    font-size: 1.2rem; /* Iets grotere tekstgrootte voor mobiel */
+    transition: color 0.3s ease; /* Overgangseffect voor hover */
+}
+
+.mobile-menu a:hover {
+    color: #D9534F; /* Rood bij hover */
+}
+
+/* Media Queries voor Responsiviteit */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem; /* Verminder padding voor kleinere schermen */
     }
 
     header h1 {
         font-size: 1.5rem;
+    }
+
+    nav {
+        display: none; /* Verborgen navigatie menu op mobiel */
+    }
+
+    .hamburger {
+        display: flex; /* Weergave van de hamburger menu op mobiel */
+    }
+
+    .mobile-menu.open {
+        display: flex; /* Weergave van het mobiele menu bij open */
     }
 }

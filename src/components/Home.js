@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <main>
       <section className="hero">
-        <h2>Welkome op mijn persoonlijke pagina</h2>
+        <h2>Welkom op mijn persoonlijke pagina</h2>
         <p>Hallo, ik ben Adriaen Limborgh, een gepassioneerde fullstack developer met een talent voor het oplossen van complexe problemen. Ontdek mijn projecten, leer meer over mij of neem contact met mij op!</p>
         <Link to="projects" duration={500} onClick={scrollToTop}>Bekijk mijn projecten</Link>
       </section>

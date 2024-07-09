@@ -1,17 +1,112 @@
 /* src/assets/css/Projects.css */
 
+/* Project Kaart */
 .project {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 12px; /* Iets grotere afgeronde hoeken voor een modernere uitstraling */
+    padding: 1.5rem; /* Meer ruimte voor de inhoud */
+    margin-bottom: 1.5rem; /* Vergroot de ruimte tussen projecten */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Iets grotere schaduw voor meer diepte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Voeg overgangseffecten toe */
+    overflow: hidden; /* Zorg ervoor dat alle inhoud netjes binnen de kaart past */
+}
+
+/* Hover Effecten voor Project Kaart */
+.project:hover {
+    transform: translateY(-5px); /* Verhoog de kaart bij hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Vergroot de schaduw bij hover */
+    background-color: #F8F9FA; /* Lichte achtergrondkleur bij hover */
+}
+
+/* Project Afbeelding */
+.project img {
+    width: 100%;
+    height: 150px; /* Zorg ervoor dat de afbeelding consistent is */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding mooi wordt bijgesneden */
+    border-radius: 8px; /* Rondere hoeken voor de afbeelding */
+    transition: transform 0.3s ease; /* Voeg overgangseffect toe voor hover */
+}
+
+/* Hover Effecten voor Project Afbeelding */
+.project img:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding iets bij hover */
+}
+
+/* Project Titel */
+.project h3 {
+    font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor een moderne uitstraling */
+    font-size: 1.5rem;
+    color: #333; /* Donkergrijs voor de tekstkleur */
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
+}
+
+/* Hover Effecten voor Project Titel */
+.project h3:hover {
+    color: #D9534F; /* Rood voor de titel bij hover */
+}
+
+/* Project Beschrijving */
+.project p {
+    color: #5F5F5F; /* Blauwgrijs voor de tekst */
+    font-size: 0.875rem; /* Kleinere tekstgrootte voor de beschrijving */
+    line-height: 1.6; /* Verhoog de leesbaarheid van de tekst */
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Link */
+.project a {
+    color: #D9534F; /* Rood voor de links */
+    font-weight: bold; /* Maak de link vetgedrukt */
+    text-decoration: none; /* Verwijder standaard onderstreping */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Voeg overgangseffect toe voor kleur en onderstreping */
+}
+
+/* Hover Effecten voor Project Link */
+.project a:hover {
+    color: #C9302C; /* Donkerder Rood bij hover */
+    text-decoration: underline; /* Onderstreep de link bij hover */
 }
 
 /* Media Queries voor Responsiveness */
+@media (max-width: 992px) {
+    .project {
+        padding: 1rem;
+        margin-bottom: 1.25rem; /* Iets grotere marge tussen projecten */
+    }
+
+    .project img {
+        height: 120px; /* Kleinere hoogte voor de afbeelding op middelgrote schermen */
+    }
+}
+
 @media (max-width: 768px) {
     .project {
         padding: 0.75rem;
+        margin-bottom: 1rem; /* Kleinere marge tussen projecten */
+    }
+
+    .project img {
+        height: 100px; /* Nog kleinere hoogte voor de afbeelding op kleinere schermen */
+    }
+}
+
+@media (max-width: 576px) {
+    .project {
+        padding: 0.5rem;
+        margin-bottom: 0.75rem; /* Nog kleinere marge tussen projecten */
+    }
+
+    .project img {
+        height: 80px; /* Kleinste hoogte voor de afbeelding op de kleinste schermen */
+    }
+
+    .project h3 {
+        font-size: 1.25rem; /* Kleinere titel op de kleinste schermen */
+    }
+
+    .project p {
+        font-size: 0.75rem; /* Kleinere tekst voor betere weergave op kleine schermen */
     }
 }
