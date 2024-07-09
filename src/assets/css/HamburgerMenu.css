@@ -106,10 +106,12 @@
 
     .hamburger-menu__item {
         margin-left: 1rem;
+        background-color: transparent;
     }
 
     .hamburger-menu__link {
         color: #ffffff; /* Witte tekst op grotere schermen */
+        background-color: #2C2C2C; /* Donker Grijs voor de achtergrond van de links */
     }
 
     .hamburger-menu__link:hover,
