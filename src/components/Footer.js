@@ -25,10 +25,10 @@ const Footer = () => {
           <h3>Volg Mij</h3>
           <div className="social-links">
             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
-              <img src="/path/to/LinkedIn_logo_initials.png" alt="LinkedIn" />
+              <img src="assets\images\LinkedIn_logo_initials.png" alt="LinkedIn" />
             </a>
             <a href="https://github.com/ALimborgh" target="_blank" rel="noopener noreferrer">
-              <img src="/path/to/github-6980894_1280.png" alt="GitHub" />
+              <img src="assets\images\github-6980894_1280.png" alt="GitHub" />
             </a>
           </div>
         </div>
@@ -36,6 +36,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p><span id="year"></span> Alle rechten voorbehouden.</p>
       </div>
+      <script> js\script.js </script>
     </footer>
   );
 }
