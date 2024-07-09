@@ -3,8 +3,8 @@
 /* Header Stijlen */
 header {
     background-color: #2C2C2C; /* Donker Grijs voor header */
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+    padding: 1rem 1.5rem; /* Verminderde padding voor eenvoudiger ontwerp */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@ header {
 
 /* Header Titel */
 header h1 {
-    font-size: 2rem;
+    font-size: 1.75rem; /* Aangepaste fontgrootte */
     color: #fff; /* Witte tekst */
     font-family: 'Montserrat', sans-serif; /* Montserrat voor een moderne uitstraling */
     transition: color 0.3s ease; /* Overgangseffect voor hover */
@@ -27,19 +27,18 @@ header h1:hover {
 /* Navigatie Menu */
 nav {
     display: flex;
-    gap: 1.5rem; /* Ruimte tussen navigatielinks */
+    gap: 1rem; /* Ruimte tussen navigatielinks */
 }
 
 nav a {
     color: #fff; /* Witte tekstkleur voor links */
     text-decoration: none; /* Verwijder onderstreping */
-    font-size: 1rem;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Overgangseffecten voor hover */
+    font-size: 0.9rem; /* Kleinere fontgrootte voor een strakker ontwerp */
+    transition: color 0.3s ease; /* Overgangseffect voor hover */
 }
 
 nav a:hover {
     color: #D9534F; /* Rood bij hover */
-    border-bottom: 2px solid #D9534F; /* Rood accent onder de link bij hover */
 }
 
 /* Hamburger Menu (voor mobiel) */
@@ -74,12 +73,12 @@ nav a:hover {
 .mobile-menu {
     display: none; /* Verborgen op grotere schermen */
     position: absolute;
-    top: 60px;
+    top: 60px; /* Onder de hamburger knop */
     left: 0;
     background-color: #2C2C2C; /* Zelfde donkergrijze achtergrond als header */
     width: 100%;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -100,15 +99,15 @@ nav a:hover {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem; /* Verminder padding voor kleinere schermen */
+        padding: 1rem; /* Verminderde padding voor kleinere schermen */
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Kleinere fontgrootte voor header titel */
     }
 
     nav {
-        display: none; /* Verborgen navigatie menu op mobiel */
+        display: none; /* Verberg navigatie menu op mobiel */
     }
 
     .hamburger {

@@ -4,10 +4,18 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 1.5rem; /* Reduceer padding voor eenvoudiger ontwerp */
+    padding: 1.5rem; /* Reductie van padding voor eenvoudiger ontwerp */
     background-color: #F8F9FA; /* Lichte achtergrondkleur voor contrast */
     border-radius: 8px; /* Minder ronde hoeken voor een subtiele uitstraling */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
+    transition: box-shadow 0.3s ease; /* Overgangseffect voor box-shadow */
+    opacity: 0; /* Begin onzichtbaar */
+    transform: translateY(10px); /* Begin 10px lager */
+    animation: fadeInUp 0.8s forwards; /* Eenvoudige fade-in-up animatie */
+}
+
+.about-content:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Verhoogde schaduw bij hover */
 }
 
 /* Verwijderd hover-effect op about-content */
@@ -16,7 +24,6 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
-    transition: transform 0.2s ease; /* Verkorte overgangstijd voor hover-effect */
 }
 
 /* Verwijderd hover-effect op profile-img */
@@ -44,6 +51,7 @@
     color: #D9534F; /* Rood voor links */
     font-weight: bold; /* Maak links vetgedrukt */
     text-decoration: none; /* Verwijder standaard onderstreping */
+    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
 }
 
 /* Hover en focus voor links */
@@ -51,6 +59,18 @@
 .about-text a:focus {
     color: #C9302C; /* Donkerder Rood bij hover en focus */
     text-decoration: underline; /* Onderstreep links bij hover en focus */
+}
+
+/* Animaties */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries voor Responsiveness */

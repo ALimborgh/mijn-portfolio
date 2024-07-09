@@ -9,8 +9,8 @@
     cursor: pointer;
     color: #D9534F; /* Primair Rood voor hamburger knop */
     position: fixed; /* Vaste positie aan de rechterkant */
-    top: 20px; /* Afstand van de bovenkant van het scherm */
-    right: 20px; /* Afstand van de rechterkant van het scherm */
+    top: 15px; /* Afstand van de bovenkant van het scherm */
+    right: 15px; /* Afstand van de rechterkant van het scherm */
     z-index: 1001; /* Zorg ervoor dat het boven alle andere elementen wordt weergegeven */
 }
 
@@ -23,12 +23,12 @@
 .hamburger-menu__nav {
     display: none; /* Verbergen op grotere schermen */
     position: fixed; /* Vaste positie */
-    top: 60px; /* Onder de hamburger knop */
-    right: 0;
+    top: 50px; /* Onder de hamburger knop */
+    right: 15px; /* Afstand van de rechterkant van het scherm */
     background-color: #ffffff; /* Wit voor de achtergrond van het menu */
     border-radius: 8px;
     padding: 1rem;
-    width: 250px; /* Breedte van het menu */
+    width: 200px; /* Verkleinde breedte van het menu */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lichtere schaduw voor minder diepte */
     z-index: 1000;
 }
@@ -47,7 +47,7 @@
 
 /* Menu items */
 .hamburger-menu__item {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Links in het menu */
@@ -105,7 +105,6 @@
     }
 
     .hamburger-menu__item {
-        margin-bottom: 0;
         margin-left: 1rem;
     }
 
@@ -126,16 +125,16 @@
 @media (max-width: 480px) {
     .hamburger-menu__button {
         font-size: 1.5rem; /* Kleinere hamburgerknop */
-        top: 15px; /* Verminder afstand van de bovenkant */
-        right: 15px; /* Verminder afstand van de rechterkant */
+        top: 10px; /* Verminder afstand van de bovenkant */
+        right: 10px; /* Verminder afstand van de rechterkant */
     }
 
     .hamburger-menu__nav {
-        width: 200px; /* Verklein de breedte van het menu */
-        top: 50px; /* Verminder afstand van de hamburger knop */
+        width: 180px; /* Verklein de breedte van het menu */
+        top: 45px; /* Verminder afstand van de hamburger knop */
     }
 
     .hamburger-menu__item {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 }

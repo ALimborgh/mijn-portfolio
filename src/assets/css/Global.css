@@ -23,7 +23,7 @@ html, body {
 a {
     text-decoration: none;
     color: inherit; /* Zorg ervoor dat links de kleur van de tekst erft */
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
+    transition: color 0.3s ease; /* Overgangseffect voor kleur */
 }
 
 a:hover {
@@ -39,7 +39,7 @@ button {
     font-family: inherit;
     font-size: 1rem;
     color: #007BFF; /* Button kleur */
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
+    transition: color 0.3s ease; /* Overgangseffect voor kleur */
 }
 
 button:hover {
@@ -83,12 +83,10 @@ main {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor hoofdtitels */
     font-size: 2.5rem; /* Aangepaste grootte */
     margin-bottom: 1rem;
-    animation: fadeIn 0.8s 0.5s forwards; /* Kortere animatie */
 }
 
 .hero p {
     font-size: 1rem; /* Aangepaste tekstgrootte */
-    animation: fadeIn 0.8s 1s forwards; /* Kortere animatie */
 }
 
 .hero a {
@@ -99,7 +97,6 @@ main {
     border-radius: 4px; /* Kleinere hoeken */
     border: 2px solid #D9534F; /* Rood kader voor de knop */
     font-size: 0.875rem; /* Kleinere tekstgrootte */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Voeg transitie-effecten toe */
     text-decoration: none; /* Verwijder standaard onderstreping */
     margin-top: 1rem;
 }
@@ -113,13 +110,11 @@ main {
 h1, h2 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor kopteksten */
     color: #2C2C2C;
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor subtitels */
     color: #C9302C; /* Donkerder Rood voor subtitels */
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
 }
 
 h1:hover, h2:hover, h3:hover {
@@ -131,13 +126,11 @@ h2 {
     border-bottom: 2px solid #D9534F; /* Dunner Rood voor accentkleur */
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    animation: fadeIn 0.8s forwards; /* Kortere animatie */
 }
 
 h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    animation: fadeIn 0.8s 0.5s forwards; /* Kortere animatie */
 }
 
 /* Paragrafen */
@@ -171,7 +164,6 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 4px; /* Kleinere hoeken */
     font-size: 1rem; /* Zorg ervoor dat de tekst leesbaar is */
-    transition: border-color 0.3s ease; /* Voeg overgangseffect toe voor randkleur */
 }
 
 input:focus, textarea:focus {
@@ -189,7 +181,7 @@ input[type="submit"] {
     font-size: 0.875rem; /* Kleinere tekstgrootte */
     border-radius: 4px; /* Kleinere hoeken */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Kleinere schaduw voor diepte */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Voeg overgangseffecten toe */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Overgangseffecten voor kleur en schaduw */
 }
 
 input[type="submit"]:hover {
@@ -203,14 +195,12 @@ footer {
     color: #fff; /* Witte tekst */
     padding: 1.5rem; /* Aangepaste padding */
     text-align: center;
-    animation: fadeIn 0.8s 1.5s forwards; /* Kortere animatie */
 }
 
-/* Footer Link Animatie */
 footer a {
     color: #D9534F; /* Rood voor footer links */
     font-weight: bold; /* Maak links vetgedrukt */
-    transition: color 0.3s ease; /* Voeg overgangseffecten toe */
+    transition: color 0.3s ease; /* Overgangseffecten voor kleur */
 }
 
 footer a:hover {
@@ -225,24 +215,9 @@ footer a:hover {
     gap: 1rem; /* Aangepaste ruimte tussen secties */
     max-width: 1200px;
     margin: 0 auto; /* Center de footer content */
-}
-
-/* Footer Content Animatie */
-.footer-content {
     opacity: 0; /* Begin onzichtbaar */
     transform: translateY(10px); /* Begin 10px lager */
-    animation: fadeInUp 0.8s 2s forwards; /* Kortere animatie */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    animation: fadeInUp 0.8s 1.5s forwards; /* Kortere animatie */
 }
 
 .footer-about, .footer-links, .footer-social {
@@ -269,11 +244,9 @@ footer a:hover {
     width: 24px; /* Iets kleiner dan eerder voor betere zichtbaarheid */
     height: 24px;
     margin-right: 8px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Voeg overgangseffecten toe */
 }
 
 .footer-social img:hover {
-    transform: scale(1.1); /* Vergroot het icoon bij hover */
     opacity: 0.8; /* Verlaag de opacity bij hover */
 }
 
@@ -288,8 +261,8 @@ footer a:hover {
     border-radius: 4px; /* Kleinere hoeken */
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Kleinere schaduw voor diepte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Voeg transities toe voor hover-effecten */
-    animation: fadeIn 0.8s 1s forwards; /* Kortere animatie */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Overgangseffecten voor hover-effecten */
+    animation: fadeInUp 0.8s forwards; /* Kortere animatie */
 }
 
 .featured-projects .card:hover {
@@ -299,7 +272,7 @@ footer a:hover {
 
 .featured-projects .card a {
     color: #D9534F; /* Rood voor links */
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
+    transition: color 0.3s ease; /* Overgangseffect voor kleur */
 }
 
 .featured-projects .card a:hover {

@@ -4,24 +4,23 @@
 footer {
   background-color: #2C2C2C; /* Donkergrijs voor de footer */
   color: #FFFFFF; /* Witte tekst in de footer */
-  padding: 1.5rem 1rem; /* Verlaagde padding voor een subtielere uitstraling */
+  padding: 1rem; /* Verlaagde padding voor een subtieler ontwerp */
   font-family: Arial, sans-serif;
-  border-top: 3px solid #D9534F; /* Dunner Rood accent bovenaan de footer */
+  border-top: 2px solid #D9534F; /* Dunner Rood accent bovenaan de footer */
 }
 
 /* Footer Content Styling */
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1rem; /* Ruimte tussen de secties */
+  align-items: center; /* Centreer de inhoud */
 }
 
 /* Algemene styling voor footer-secties */
 .footer-about, .footer-links, .footer-social {
-  flex: 1;
   min-width: 150px; /* Kleinere min-width voor kleinere schermen */
-  margin-bottom: 1rem; /* Ruimte tussen secties */
+  text-align: center; /* Centreer de tekst in de secties */
 }
 
 /* Footer Links */
@@ -37,45 +36,25 @@ footer {
 
 /* Footer Social Media Iconen */
 .social-links img {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px; /* Kleinere marge tussen iconen */
-  transition: none; /* Geen overgangseffecten voor hover */
+  width: 24px; /* Consistente grootte voor iconen */
+  height: 24px;
+  margin-right: 6px; /* Kleine marge tussen iconen */
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  text-align: center;
   margin-top: 1rem;
   font-size: 0.875rem; /* Kleinere tekstgrootte voor de footer-bottom */
 }
 
 /* Media Queries voor Responsiveness */
-@media (max-width: 992px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center; /* Centreer secties in de kolom lay-out */
-  }
-
-  .footer-about, .footer-links, .footer-social {
-    min-width: 100%;
-    text-align: center; /* Centreer de tekst in de secties */
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: center; /* Centreer social media iconen */
-  }
-}
-
 @media (max-width: 576px) {
   .social-links img {
-    width: 20px;
+    width: 20px; /* Aangepaste grootte voor iconen op kleinere schermen */
     height: 20px;
-    margin-right: 6px; /* Nog kleinere marge tussen iconen */
   }
 
   .footer-bottom {
-    font-size: 0.75rem; /* Nog kleinere tekstgrootte voor footer-bottom */
+    font-size: 0.75rem; /* Kleinere tekstgrootte voor footer-bottom op kleine schermen */
   }
 }
