@@ -1,8 +1,9 @@
 // src/components/AboutMe.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/css/AboutMe.css';
 
-const AboutMe = () => {
+const AboutMe = () => {  
   return (
     <main>
       <section id="about">
@@ -20,7 +21,7 @@ const AboutMe = () => {
               Ik ben gespecialiseerd in zowel frontend- als backend-ontwikkeling, met expertise in HTML, CSS, JavaScript, React en Python. Ik wil altijd graag nieuwe uitdagingen aangaan en bijdragen aan spannende projecten.
             </p>
             <p>
-              Verken gerust mijn <a href="/projects">projecten</a> om te zien waar ik aan heb gewerkt, of neem contact op via het <a href="/contact">contact</a> pagina. Ik kijk ernaar uit om met je in contact te komen!
+              Verken gerust mijn <Link to="/Projects">projecten</Link> om te zien waar ik aan heb gewerkt, of neem contact op via het <Link to="/Contact">contact</Link> pagina. Ik kijk ernaar uit om met je in contact te komen!
             </p>
           </div>
         </div>
