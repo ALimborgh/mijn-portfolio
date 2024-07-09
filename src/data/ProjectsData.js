@@ -8,7 +8,7 @@ const projectsData = [
       title: 'Basic React Project',
       description: 'De Basic React Project is een React-project die wordt gebruikt om gedetailleerde informatie over een specifiek recept weer te geven op een kookwebsite of -app.',
       Toepassingen:['Kookwebsites', 'Dieet- en gezondheidsapps', 'E-learning platforms', 'Persoonlijke receptenbeheer', 'Voedselblogs'],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Reactrouter', 'Chakra UI'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'React-router', 'Chakra UI'],
       imagePaths: [
         basicReactProject, 
         basicReactProject2

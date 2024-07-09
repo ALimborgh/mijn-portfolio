@@ -51,7 +51,7 @@ const Projects = () => {
                 <p key={index}>{app}</p>
               )) || 'Geen toepassingen vermeld'}
             </div>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">Bekijk project</a>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">Bekijk de code voor dit project</a>
           </div>
         </div>
       ))}
