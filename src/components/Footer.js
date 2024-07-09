@@ -20,7 +20,6 @@ const Footer = () => {
           <Link 
             to="about"
             className="footer-link"
-            smooth={true}
             duration={500}
             onClick={scrollToTop} // Add onClick event handler
           >
@@ -30,11 +29,11 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Snelkoppelingen</h3>
           <ul>
-            <li><Link to="/" smooth={true} duration={500} onClick={scrollToTop}>Home</Link></li>
-            <li><Link to="about" smooth={true} duration={500} onClick={scrollToTop}>Over mij</Link></li>
-            <li><Link to="projects" smooth={true} duration={500} onClick={scrollToTop}>Projecten</Link></li>
-            <li><Link to="resume" smooth={true} duration={500} onClick={scrollToTop}>CV</Link></li>
-            <li><Link to="contact" smooth={true} duration={500} onClick={scrollToTop}>Contact</Link></li>
+            <li><Link to="/"  duration={500} onClick={scrollToTop}>Home</Link></li>
+            <li><Link to="about" duration={500} onClick={scrollToTop}>Over mij</Link></li>
+            <li><Link to="projects" duration={500} onClick={scrollToTop}>Projecten</Link></li>
+            <li><Link to="resume" duration={500} onClick={scrollToTop}>CV</Link></li>
+            <li><Link to="contact" duration={500} onClick={scrollToTop}>Contact</Link></li>
           </ul>
         </div>
         <div className="footer-social">
