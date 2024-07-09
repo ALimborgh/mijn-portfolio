@@ -1,0 +1,12 @@
+/* src/assets/css/Resume.css */
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Media Queries voor Responsiveness */
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+}

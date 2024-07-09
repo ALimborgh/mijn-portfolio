@@ -1,5 +1,6 @@
 // src/components/Resume.js
 import React from 'react';
+import '../assets/css/Resume.css';
 
 const Resume = () => {
   return (

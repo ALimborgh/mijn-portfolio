@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React from 'react';
-import './assets/css/Header.css';
+import '../assets/css/Header.css';
 import HamburgerMenu from './HamburgerMenu';
 
 const Header = () => {

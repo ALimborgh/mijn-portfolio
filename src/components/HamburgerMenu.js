@@ -1,18 +1,21 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { NavLink } from 'react-router-dom'; // Import NavLink for active styling
+// src/components/HamburgerMenu.js
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import '../assets/css/HamburgerMenu.css';
 
 const HamburgerMenu = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
-  const toggleMenu = useCallback(() => {
-    setMenuVisible(prevState => !prevState);
-  }, []);
+  const toggleMenu = (event) => {
+    setMenuVisible(!menuVisible);
+    event.stopPropagation();
+  };
 
-  const closeMenu = useCallback((event) => {
+  const closeMenu = (event) => {
     if (!event.target.closest('#navMenu') && window.innerWidth <= 768) {
       setMenuVisible(false);
     }
-  }, []);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,20 +31,18 @@ const HamburgerMenu = () => {
       window.removeEventListener('resize', handleResize);
       document.removeEventListener('click', closeMenu);
     };
-  }, [closeMenu]);
+  }, []);
 
   return (
     <>
-      <button className={`hamburger ${menuVisible ? 'hide' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation" aria-expanded={menuVisible}>
-        <span className="hamburger-icon">☰</span>
-      </button>
-      <nav id="navMenu" className={menuVisible ? 'visible' : 'hidden'}>
-        <ul>
-          <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
-          <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>Over Mij</NavLink></li>
-          <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>Projecten</NavLink></li>
-          <li><NavLink to="/resume" className={({ isActive }) => isActive ? 'active' : ''}>CV</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
+      <button className={`hamburger-menu__button ${menuVisible ? 'hide' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation">☰</button>
+      <nav id="navMenu" className={`hamburger-menu__nav ${menuVisible ? 'hamburger-menu__nav--show' : ''}`}>
+        <ul className="hamburger-menu__list">
+          <li className="hamburger-menu__item"><Link to="/" className="hamburger-menu__link">Home</Link></li>
+          <li className="hamburger-menu__item"><Link to="/about" className="hamburger-menu__link">Over Mij</Link></li>
+          <li className="hamburger-menu__item"><Link to="/projects" className="hamburger-menu__link">Projecten</Link></li>
+          <li className="hamburger-menu__item"><Link to="/resume" className="hamburger-menu__link">CV</Link></li>
+          <li className="hamburger-menu__item"><Link to="/contact" className="hamburger-menu__link">Contact</Link></li>
         </ul>
       </nav>
     </>

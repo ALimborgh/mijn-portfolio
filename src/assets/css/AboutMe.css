@@ -1,0 +1,35 @@
+/* src/assets/css/AboutMe.css */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Media Queries voor Responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-text p {
+        text-align: center;
+    }
+}

@@ -1,0 +1,236 @@
+/* src/assets/css/global.css */
+
+/* Basis Reset en Normale Stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F8F9FA;
+    overflow-x: hidden; /* Voorkom horizontaal scrollen */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Basis voor knoppen */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #007BFF; /* Button kleur */
+}
+
+button:hover {
+    color: #0056b3; /* Button kleur bij hover */
+}
+
+/* Basis voor secties */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+
+/* Hoofdtitel */
+h1 {
+    font-size: 2.5rem;
+    color: #2C2C2C;
+    margin-bottom: 1rem;
+}
+
+/* Subtitels */
+h2 {
+    font-size: 2rem;
+    color: #2C2C2C; /* Donker Grijs voor titels */
+    border-bottom: 2px solid #D9534F; /* Rood voor accentkleur */
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2C2C2C; /* Donker Grijs voor subtitels */
+}
+
+/* Paragrafen */
+p {
+    color: #5F5F5F; /* Blauwgrijs voor tekst */
+    margin-bottom: 1rem;
+}
+
+/* Lijsten */
+ul {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Formulieren */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #D9534F; /* Rood voor submit knoppen */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #C9302C; /* Donkerder Rood bij hover */
+}
+
+/* Footer */
+footer {
+    background-color: #2C2C2C; /* Donker Grijs */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #D9534F; /* Rood voor footer links */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-about, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-about p {
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Hero */
+.hero {
+    background-color: #D9534F; /* Rood als achtergrondkleur */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Projects */
+.featured-projects {
+    margin-bottom: 2rem;
+}
+
+.featured-projects .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-projects .card a {
+    color: #D9534F; /* Rood voor links */
+}
+
+/* Media Queries voor Responsiveness */
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-about, .footer-links, .footer-social {
+        min-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .hero {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-projects .card {
+        padding: 0.75rem;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-social img {
+        width: 20px;
+        height: 20px;
+    }
+}

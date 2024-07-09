@@ -1,0 +1,130 @@
+/* src/assets/css/HamburgerMenu.css */
+
+/* Stijlen voor de hamburgerknop */
+.hamburger-menu__button {
+    display: none; /* Verbergen op grotere schermen */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #D9534F; /* Primair Rood voor hamburger knop */
+    transition: color 0.3s ease;
+    position: fixed; /* Vaste positie aan de rechterkant */
+    top: 20px; /* Afstand van de bovenkant van het scherm */
+    right: 20px; /* Afstand van de rechterkant van het scherm */
+    z-index: 1001; /* Zorg ervoor dat het boven alle andere elementen wordt weergegeven */
+}
+
+.hamburger-menu__button:hover,
+.hamburger-menu__button:focus {
+    color: #C9302C; /* Donkerder Rood bij hover en focus */
+}
+
+/* Stijlen voor het nav-menu */
+.hamburger-menu__nav {
+    display: none; /* Verbergen op grotere schermen */
+    position: fixed; /* Vaste positie */
+    top: 60px; /* Onder de hamburger knop */
+    right: 0;
+    background-color: #ffffff; /* Wit voor de achtergrond van het menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px; /* Breedte van het menu */
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Show het menu als het zichtbaar is */
+.hamburger-menu__nav.hamburger-menu__nav--show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu lijst */
+.hamburger-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu items */
+.hamburger-menu__item {
+    margin-bottom: 1rem;
+}
+
+/* Links in het menu */
+.hamburger-menu__link {
+    color: #2C2C2C; /* Donker Grijs voor links */
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover en focus voor links in het menu */
+.hamburger-menu__link:hover,
+.hamburger-menu__link:focus {
+    background-color: #F0F0F0; /* Lichtgrijs achtergrond bij hover en focus */
+    color: #0056b3; /* Blauw bij hover en focus */
+}
+
+/* Actieve link */
+.hamburger-menu__link--active {
+    font-weight: bold;
+    color: #D9534F; /* Primair Rood voor actieve link */
+}
+
+/* Responsive breakpoints */
+
+/* Tablet en mobiel */
+@media (max-width: 768px) {
+    .hamburger-menu__button {
+        display: block; /* Weergeven op kleinere schermen */
+    }
+
+    .hamburger-menu__nav {
+        display: none; /* Verbergen op kleinere schermen */
+    }
+}
+
+/* Tablet en grotere schermen */
+@media (min-width: 769px) {
+    .hamburger-menu__button {
+        display: none; /* Verbergen op grotere schermen */
+    }
+
+    .hamburger-menu__nav {
+        display: flex;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        opacity: 1;
+        transform: none;
+    }
+
+    .hamburger-menu__list {
+        display: flex;
+    }
+
+    .hamburger-menu__item {
+        margin-bottom: 0;
+        margin-left: 1rem;
+    }
+
+    .hamburger-menu__link {
+        color: #ffffff; /* Witte tekst op grotere schermen */
+    }
+
+    .hamburger-menu__link:hover,
+    .hamburger-menu__link:focus {
+        background-color: transparent; /* Geen achtergrondkleur op grotere schermen */
+        color: #D9534F; /* Primair Rood bij hover en focus op grotere schermen */
+    }
+}

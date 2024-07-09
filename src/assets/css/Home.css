@@ -1,0 +1,160 @@
+/* src/components/Home/Home.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2C2C2C; /* Donker Grijs voor tekst */
+    background-color: #E5E5E5; /* Zacht Grijs als achtergrondkleur */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #D9534F; /* Rood voor de hero sectie */
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #E07D7D; /* Zacht Rood voor de knop */
+    color: #2C2C2C; /* Donker Grijs voor tekst */
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero a:hover {
+    background-color: #D9534F; /* Rood bij hover */
+    color: #fff;
+}
+
+/* Featured Projects */
+.featured-projects {
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-projects h2 {
+    margin-bottom: 1.5rem;
+    color: #2C2C2C; /* Donker Grijs voor titels */
+}
+
+.card {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2C2C2C; /* Donker Grijs voor titels */
+}
+
+.card p {
+    margin-bottom: 0;
+    color: #5F5F5F; /* Blauwgrijs voor tekst */
+}
+
+.card a {
+    color: #D9534F; /* Rood voor links */
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* About Me Section */
+.about-me {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #F9F9F9; /* Koel Wit voor de About Me sectie */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.about-me h2 {
+    margin-bottom: 1.5rem;
+    color: #2C2C2C; /* Donker Grijs voor titels */
+}
+
+.about-me p {
+    color: #5F5F5F; /* Blauwgrijs voor tekst */
+}
+
+.about-me a {
+    color: #D9534F; /* Rood voor links */
+    text-decoration: none;
+}
+
+.about-me a:hover {
+    text-decoration: underline;
+}
+
+/* Resume Section */
+.resume {
+    background-color: #F9F9F9; /* Koel Wit voor de CV sectie */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume h2 {
+    margin-bottom: 1.5rem;
+    color: #2C2C2C; /* Donker Grijs voor titels */
+}
+
+.resume p {
+    margin-bottom: 1rem;
+    color: #5F5F5F; /* Blauwgrijs voor tekst */
+    font-size: 1.125rem;
+}
+
+.resume a {
+    color: #D9534F; /* Rood voor links */
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
