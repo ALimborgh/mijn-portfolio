@@ -75,7 +75,7 @@
 /* Responsive breakpoints */
 
 /* Tablet en mobiel */
-@media (max-width: 768px) {
+@media (max-width: 830px) {
     .hamburger-menu__button {
         display: block; /* Weergeven op kleinere schermen */
     }
@@ -86,7 +86,7 @@
 }
 
 /* Tablet en grotere schermen */
-@media (min-width: 769px) {
+@media (min-width: 830px) {
     .hamburger-menu__button {
         display: none; /* Verbergen op grotere schermen */
     }
@@ -122,7 +122,7 @@
 /* Extra media queries voor kleinere schermen */
 
 /* Extra klein scherm (mobiel) */
-@media (max-width: 480px) {
+@media (max-width: 512px) {
     .hamburger-menu__button {
         font-size: 1.5rem; /* Kleinere hamburgerknop */
         top: 10px; /* Verminder afstand van de bovenkant */
