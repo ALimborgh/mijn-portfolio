@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterYear from './FooterYear';
 import '../assets/css/Footer.css';
+import githubLogo from '../assets/images/github-6980894_1280.png';
+import linkedInLogo from '../assets/images/LinkedIn_logo_initials.png';
 
 const Footer = () => {
   // Function to scroll to the top of the page
@@ -41,10 +43,10 @@ const Footer = () => {
           <h3>Volg Mij</h3>
           <div className="social-links">
             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/images/LinkedIn_logo_initials.png" alt="LinkedIn" />
+              <img src={linkedInLogo} alt="LinkedIn" />
             </a>
             <a href="https://github.com/ALimborgh" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/images/github-6980894_1280.png" alt="GitHub" />
+              <img src={githubLogo} alt="GitHub" />
             </a>
           </div>
         </div>
