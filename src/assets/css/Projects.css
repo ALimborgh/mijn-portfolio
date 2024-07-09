@@ -2,14 +2,17 @@
 
 /* Project Kaart */
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Iets kleinere afgeronde hoeken voor eenvoudiger ontwerp */
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px; /* Kleine afgeronde hoeken voor een netter uiterlijk */
     padding: 1rem; /* Basispadding voor inhoud */
-    margin-bottom: 1rem; /* Ruimte tussen projecten */
+    margin-bottom: 1.5rem; /* Ruimte tussen projecten */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Basis overgangseffecten */
     overflow: hidden; /* Zorg ervoor dat alle inhoud netjes binnen de kaart past */
+    display: flex; /* Gebruik flexbox voor uitlijning */
+    flex-direction: column; /* Stapel de inhoud op voor betere weergave */
+    gap: 1rem; /* Ruimte tussen elementen */
 }
 
 /* Hover Effecten voor Project Kaart */
@@ -18,39 +21,69 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Vergroot de schaduw bij hover */
 }
 
-/* Project Afbeelding */
-.project img {
+/* Afbeelding Container */
+.project-image {
     width: 100%;
-    height: 120px; /* Consistente hoogte voor de afbeelding */
-    object-fit: cover; /* Zorg ervoor dat de afbeelding mooi wordt bijgesneden */
-    border-radius: 4px; /* Kleinere afgeronde hoeken voor de afbeelding */
-    transition: transform 0.3s ease; /* Overgangseffect voor hover */
+    height: auto; /* Zorgt ervoor dat de afbeelding zich aanpast aan de breedte van de kaart */
 }
 
-/* Hover Effecten voor Project Afbeelding */
-.project img:hover {
-    transform: scale(1.03); /* Verhoog de afbeelding iets bij hover */
+/* Swiper Container */
+.project-image .swiper {
+    width: 100%;
+    height: 200px; /* Instellen van een vaste hoogte voor de swiper */
+}
+
+.project-image .swiper-slide {
+    display: flex;
+    justify-content: center; /* Center de afbeelding in de slide */
+    align-items: center; /* Center de afbeelding in de slide */
+}
+
+.project-image .swiper-slide img {
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder wordt dan de swiper container */
+    max-height: 100%; /* Zorg ervoor dat de afbeelding niet hoger wordt dan de swiper container */
+    height: auto; /* Zorg ervoor dat de afbeelding zich aanpast aan de hoogte van de container */
+    object-fit: contain; /* Zorg ervoor dat de afbeelding volledig zichtbaar is zonder te worden bijgesneden */
+    border-radius: 8px; /* Zelfde afgeronde hoeken als de kaart */
 }
 
 /* Project Titel */
-.project h3 {
+.project h2 {
     font-family: 'Montserrat', sans-serif; /* Montserrat voor een moderne uitstraling */
-    font-size: 1.25rem; /* Aangepaste fontgrootte */
-    color: #333; /* Donkergrijs voor de tekstkleur */
+    font-size: 1.5rem; /* Aangepaste fontgrootte */
+    color: #333333; /* Donkergrijs voor de tekstkleur */
     margin-bottom: 0.5rem;
+    line-height: 1.4; /* Verhoog de regelhoogte voor betere leesbaarheid */
 }
 
 /* Hover Effecten voor Project Titel */
-.project h3:hover {
+.project h2:hover {
     color: #D9534F; /* Rood voor de titel bij hover */
 }
 
 /* Project Beschrijving */
 .project p {
     color: #5F5F5F; /* Blauwgrijs voor de tekst */
-    font-size: 0.875rem; /* Kleinere tekstgrootte voor de beschrijving */
-    line-height: 1.4; /* Verhoog de leesbaarheid van de tekst */
+    font-size: 1rem; /* Aangepaste tekstgrootte voor de beschrijving */
+    line-height: 1.6; /* Verhoog de leesbaarheid van de tekst */
     margin-bottom: 0.75rem;
+}
+
+/* Project Technologieën en Toepassingen */
+.project .technologies,
+.project .toepassingen {
+    display: flex;
+    flex-wrap: wrap; /* Zorgt ervoor dat items op meerdere regels passen */
+    gap: 0.5rem; /* Ruimte tussen items */
+}
+
+.project .technologies p,
+.project .toepassingen p {
+    background-color: #f0f0f0; /* Achtergrondkleur voor technologieën en toepassingen */
+    border-radius: 4px; /* Afgeronde hoeken voor items */
+    padding: 0.25rem 0.5rem; /* Padding binnen items */
+    font-size: 0.875rem; /* Kleinere tekstgrootte voor items */
+    color: #333333; /* Donkergrijs voor de tekstkleur */
 }
 
 /* Project Link */
@@ -67,29 +100,44 @@
     text-decoration: underline; /* Onderstreep de link bij hover */
 }
 
+/* Swiper Carrousel */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center de afbeelding in de slide */
+    align-items: center; /* Center de afbeelding in de slide */
+}
+
 /* Media Queries voor Responsiveness */
 @media (max-width: 768px) {
     .project {
         padding: 0.75rem; /* Verminderde padding voor kleinere schermen */
-        margin-bottom: 0.75rem; /* Kleinere marge tussen projecten */
+        margin-bottom: 1rem; /* Kleinere marge tussen projecten */
     }
 
-    .project img {
-        height: 100px; /* Kleinere hoogte voor de afbeelding op kleinere schermen */
+    .project-image .swiper {
+        height: 150px; /* Verminder de hoogte van de swiper voor kleinere schermen */
+    }
+
+    .project h2 {
+        font-size: 1.25rem; /* Kleinere titel op kleinere schermen */
+    }
+
+    .project p {
+        font-size: 0.875rem; /* Kleinere tekst voor betere weergave op kleine schermen */
     }
 }
 
 @media (max-width: 576px) {
     .project {
         padding: 0.5rem; /* Nog kleinere padding voor de kleinste schermen */
-        margin-bottom: 0.5rem; /* Nog kleinere marge tussen projecten */
+        margin-bottom: 0.75rem; /* Nog kleinere marge tussen projecten */
     }
 
-    .project img {
-        height: 80px; /* Kleinste hoogte voor de afbeelding op de kleinste schermen */
+    .project-image .swiper {
+        height: 100px; /* Nog kleinere hoogte van de swiper voor de kleinste schermen */
     }
 
-    .project h3 {
+    .project h2 {
         font-size: 1rem; /* Kleinere titel op de kleinste schermen */
     }
 
