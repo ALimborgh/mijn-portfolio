@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="footer-social">
           <h3>Volg Mij</h3>
           <div className="social-links">
-            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+            <a href="https://nl.linkedin.com/in/adriaen-limborgh-337065147" target="_blank" rel="noopener noreferrer">
               <img src={linkedInLogo} alt="LinkedIn" />
             </a>
             <a href="https://github.com/ALimborgh" target="_blank" rel="noopener noreferrer">
