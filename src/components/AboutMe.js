@@ -2,13 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/AboutMe.css';
+import profileImg from '../assets/images/Profiel foto.jpg';
 
 const AboutMe = () => {  
   return (
     <main>
       <section id="about">
         <div className="about-content">
-          <img src="" alt="Adriaen Limborgh" className="profile-img" />
+          <img src={profileImg} alt="Adriaen Limborgh" className="profile-img" />
           <div className="about-text">
             <h2>Over mij</h2>
             <p>
