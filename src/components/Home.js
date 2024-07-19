@@ -1,15 +1,18 @@
 // src/components/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import projectsData from '../data/ProjectsData';
 
 const Home = () => {
-    // Function to scroll to the top of the page
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth', // For smooth scrolling
-      });
-    };
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // For smooth scrolling
+    });
+  };
+
+  const projectsToDisplay = projectsData.slice(0, 2);
 
   return (
     <main>
@@ -20,16 +23,15 @@ const Home = () => {
       </section>
 
       <section className="featured-projects">
-        <h2>Featured Projects</h2>
-        <div className="card">
-          <h3>Project 1</h3>
-          <p>Een korte omschrijving van Project 1.</p>
-        </div>
-        <div className="card">
-          <h3>Project 2</h3>
-          <p>Een korte omschrijving van Project 2.</p>
-        </div>
-      </section>
+                <h2>Featured Projects</h2>
+                {projectsToDisplay.map(project => (
+                    <div className="card" key={project.id}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <p> Voor meer informatie <Link to="projects" duration={500} onClick={scrollToTop}>click hier</Link></p>
+                    </div>
+                ))}
+            </section>
 
       <section className="about-me">
         <h2>Over mij</h2>
