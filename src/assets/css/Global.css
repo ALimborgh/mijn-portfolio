@@ -38,12 +38,13 @@ button {
     background: none;
     font-family: inherit;
     font-size: 1rem;
-    color: #007BFF; /* Button kleur */
+    font-weight: bold;
+    color: #C9302C; /* Button kleur */
     transition: color 0.3s ease; /* Overgangseffect voor kleur */
 }
 
 button:hover {
-    color: #0056b3; /* Button kleur bij hover */
+    color: #D9534F; /* Button kleur bij hover */
 }
 
 /* Basis voor secties */
