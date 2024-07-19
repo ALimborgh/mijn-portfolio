@@ -14,7 +14,7 @@ html, body {
     font-family: 'Roboto', sans-serif; /* Standaard font voor tekst */
     line-height: 1.6;
     color: #333;
-    background-color: #F8F9FA;
+    background-color: #f4f4f4d0; /* Lichtgrijze achtergrondkleur */
     overflow-x: hidden; /* Voorkom horizontaal scrollen */
     scroll-behavior: smooth; /* Zorg ervoor dat scrollen soepel is */
 }
