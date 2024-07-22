@@ -21,6 +21,28 @@ const Resume = () => {
       </section>
 
       <section>
+        <h2>Education</h2>
+        <h3>Winc Academy - Fullstack Developer</h3>
+        <p>Juli 2024</p>
+        <ul>
+          <li>Een gevarieerde set vaardigheden verworven, variërend van HTML, CSS, JavaScript, React, Git, Python, Flask, Database Expertise, PeeWee, Wireframing, Toegankelijkheid, Webdesign en Coderingsvaardigheden.</li>
+        </ul>
+
+        <h3>Hogeschool van Arnhem en Nijmegen - Propedeuse Lerarenopleiding Wiskunde</h3>
+        <p>Juli 2020</p>
+        <ul>
+          <li>Propedeuse behaald met uitstekende resultaten.</li>
+        </ul>
+
+        <h3>Lyceum Schöndeln - HAVO Diploma</h3>
+        <p>Juli 2012</p>
+        <ul>
+          <li>Havodiploma behaald met uitstekende resultaten.</li>
+          <li>Actief vrijwilligerswerk gedaan voor het vak CKV.</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>Work Experience</h2>
         <h3>McDonald's - Crewtrainer</h3>
         <p>November 2011 – heden</p>
@@ -35,28 +57,6 @@ const Resume = () => {
         <ul>
           <li>Geven van bijlessen in exacte vakken aan middelbare scholieren.</li>
           <li>Coachen en begeleiden van leerlingen bij hun studie en huiswerk.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-        <h3>Lyceum Schöndeln - HAVO Diploma</h3>
-        <p>Juli 2012</p>
-        <ul>
-          <li>Havodiploma behaald met uitstekende resultaten.</li>
-          <li>Actief vrijwilligerswerk gedaan voor het vak CKV.</li>
-        </ul>
-
-        <h3>Hogeschool van Arnhem en Nijmegen - Propedeuse Lerarenopleiding Wiskunde</h3>
-        <p>Juli 2020</p>
-        <ul>
-          <li>Propedeuse behaald met uitstekende resultaten.</li>
-        </ul>
-
-        <h3>Winc Academy - Fullstack Developer</h3>
-        <p>Juli 2024</p>
-        <ul>
-          <li>Een gevarieerde set vaardigheden verworven, variërend van HTML, CSS, JavaScript, React, Git, Python, Flask, Database Expertise, PeeWee, Wireframing, Toegankelijkheid, Webdesign en Coderingsvaardigheden.</li>
         </ul>
       </section>
 
