@@ -1,23 +1,23 @@
 // src/components/Resume.js
 import React from 'react';
 import '../assets/css/Resume.css';
+import { Link } from 'react-router-dom';
 
 const Resume = () => {
   return (
     <main>
       <section>
-        <h2>Contact Information</h2>
-        <p>
-          Adriaen Limborgh<br />
-          Adres: Luifelstraat 126, 6041 EK Roermond<br />
-          Tel: +31 622 620 054<br />
-          E-mail: <a href="mailto:Adriaen95@hotmail.com">Adriaen95@hotmail.com</a>
-        </p>
-      </section>
-
-      <section>
         <h2>Profile</h2>
-        <p>Enthousiaste en leergierige professional met een passie voor het oplossen van complexe problemen. Klaar voor een nieuwe uitdaging om mijn vaardigheden verder te ontwikkelen en bij te dragen aan een dynamische werkomgeving.</p>
+        <p>Ik ben een gedreven expert met een passie voor het aanpakken van uitdagende problemen. Mijn leergierigheid motiveert me om voortdurend
+          nieuwe vaardigheden te verwerven en te verbeteren. Ik sta open voor een nieuwe uitdaging waarin ik mijn kennis kan vergroten en
+          een waardevolle rol kan spelen in een dynamische en innovatieve werkomgeving. Ik geloof sterk in de kracht van samenwerking en
+          communicatie, en ik streef ernaar om altijd een positieve bijdrage te leveren aan het team. Mijn analytische benadering helpt me om complexe
+          vraagstukken te doorgronden en oplossingen te vinden die zowel efficiënt als effectief zijn. Daarnaast ben ik flexibel en pas ik me
+          gemakkelijk aan veranderende omstandigheden aan, wat me in staat stelt om onder druk te presteren en deadlines te halen. In mijn vorige
+          functies heb ik aangetoond dat ik niet alleen technisch bekwaam ben, maar ook een betrouwbare en inspirerende collega. Ik kijk
+          ernaar uit om mijn expertise in te zetten en verder te ontwikkelen binnen een organisatie die innovatie en groei waardeert.
+        </p>
+        <p>Wil je mij contacteren <Link to="/Contact"> click dan hier</Link> en vul het contact formulier in.</p>
       </section>
 
       <section>
@@ -56,7 +56,7 @@ const Resume = () => {
         <h3>Winc Academy - Fullstack Developer</h3>
         <p>Juli 2024</p>
         <ul>
-          <li>Vaardigheden ontwikkeld in HTML, CSS, JavaScript, React, Git en Python.</li>
+          <li>Een gevarieerde set vaardigheden verworven, variërend van HTML, CSS, JavaScript, React, Git, Python, Flask, Database Expertise, PeeWee, Wireframing, Toegankelijkheid, Webdesign en Coderingsvaardigheden.</li>
         </ul>
       </section>
 
@@ -85,6 +85,20 @@ const Resume = () => {
         <h3>Hockeyclub Concordia - Hockeytrainer</h3>
         <ul>
           <li>Trainer van jeugdteams, waarbij ik vaardigheden en teamwork bevorder.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Belangrijkste interesses</h2>
+        <ul>
+          <li>Gamen: Het ontwikkelen van strategisch inzicht en probleemoplossend
+          vermogen.</li>
+          <li>Hockey: Het versterken van teamgeest en fysieke fitheid.</li>
+          <li>Dungeons & Dragons (D&D): Het bevorderen van creativiteit en
+          samenwerking door middel van rollenspel.</li>
+          <li>Schaken: Het verbeteren van strategisch denken en concentratie.</li>
+          <li>Films en series: De analyse van verhaallijnen en karakterontwikkeling,
+          alsmede ontspanning.</li>
         </ul>
       </section>
     </main>
