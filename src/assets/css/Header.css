@@ -1,8 +1,7 @@
-/* src/assets/css/Header.css */
 
 /* Header Stijlen */
 header {
-    background-color: #2C2C2C; /* Donker Grijs voor header */
+    background-color: var(--background-color-dark); /* Donker Grijs voor header */
     padding: 1rem 1.5rem; /* Verminderde padding voor eenvoudiger ontwerp */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     display: flex;
@@ -15,30 +14,19 @@ header {
 /* Header Titel */
 header h1 {
     font-size: 1.75rem; /* Aangepaste fontgrootte */
-    color: #fff; /* Witte tekst */
+    color: var(--hero-text-color); /* Witte tekstkleur */
     font-family: 'Montserrat', sans-serif; /* Montserrat voor een moderne uitstraling */
     transition: color 0.3s ease; /* Overgangseffect voor hover */
 }
 
 header h1:hover {
-    color: #D9534F; /* Rood bij hover */
+    color: var(--secondary-color); /* Goud bij hover */
 }
 
 /* Navigatie Menu */
 nav {
     display: flex;
     gap: 1rem; /* Ruimte tussen navigatielinks */
-}
-
-nav a {
-    color: #fff; /* Witte tekstkleur voor links */
-    text-decoration: none; /* Verwijder onderstreping */
-    font-size: 0.9rem; /* Kleinere fontgrootte voor een strakker ontwerp */
-    transition: color 0.3s ease; /* Overgangseffect voor hover */
-}
-
-nav a:hover {
-    color: #D9534F; /* Rood bij hover */
 }
 
 /* Hamburger Menu (voor mobiel) */
@@ -52,7 +40,7 @@ nav a:hover {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #fff; /* Witte kleur voor de lijnen */
+    background-color: var(--hero-text-color); /* Witte kleur voor de lijnen */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Overgangseffecten voor hamburger animatie */
 }
 
@@ -75,7 +63,7 @@ nav a:hover {
     position: absolute;
     top: 60px; /* Onder de hamburger knop */
     left: 0;
-    background-color: #2C2C2C; /* Zelfde donkergrijze achtergrond als header */
+    background-color: var(--accent-color); /* Zelfde donkergrijze achtergrond als header */
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
@@ -85,13 +73,13 @@ nav a:hover {
 }
 
 .mobile-menu a {
-    color: #fff; /* Witte tekstkleur voor links */
+    color: var(--hero-text-color); /* Witte tekstkleur voor links */
     font-size: 1.2rem; /* Iets grotere tekstgrootte voor mobiel */
     transition: color 0.3s ease; /* Overgangseffect voor hover */
 }
 
 .mobile-menu a:hover {
-    color: #D9534F; /* Rood bij hover */
+    color: var(--secondary-color); /* Goud bij hover */
 }
 
 /* Media Queries voor Responsiviteit */

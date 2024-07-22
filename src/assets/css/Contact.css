@@ -1,5 +1,3 @@
-/* src/assets/css/Contact.css */
-
 /* Algemeen Formulier Stijl */
 form {
     display: flex;
@@ -8,7 +6,7 @@ form {
     max-width: 600px; /* Beperk de breedte van het formulier */
     margin: 0 auto; /* Centreer het formulier horizontaal */
     padding: 1rem; /* Padding voor eenvoudiger ontwerp */
-    background-color: #F8F9FA; /* Lichtgrijze achtergrond voor het formulier */
+    background-color: var(--background-color-light); /* Licht grijze achtergrond voor het formulier */
     border-radius: 8px; /* Afgeronde hoeken voor een moderne uitstraling */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
 }
@@ -16,13 +14,15 @@ form {
 /* Input en textarea Stijl */
 input, textarea {
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color); /* Randkleur voor input en textarea */
     padding: 0.5rem; /* Padding voor betere gebruikerservaring */
     font-size: 1rem; /* Zorg ervoor dat de tekstgrootte leesbaar is */
+    color: var(--text-color); /* Tekstkleur voor input en textarea */
 }
 
+/* Focusstijl voor Input en Textarea */
 input:focus, textarea:focus {
-    border-color: #D9534F; /* Rood accentkleur bij focus */
+    border-color: var(--primary-color); /* Diep Marineblauw bij focus */
     outline: none; /* Verwijder de standaard focus outline */
 }
 
@@ -34,17 +34,19 @@ textarea {
 
 /* Submit Button */
 input[type="submit"] {
-    background-color: #D9534F; /* Rood voor submit knoppen */
-    color: #fff;
+    background-color: var(--primary-color); /* Diep Marineblauw voor submit knoppen */
+    color: var(--background-color-light); /* Witte tekstkleur voor submit knoppen */
     border: none;
     padding: 0.5rem; /* Padding voor eenvoudiger ontwerp */
     font-size: 1rem; /* Zorg ervoor dat de tekstgrootte leesbaar is */
     border-radius: 4px; /* Afgeronde hoeken */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Overgangseffect voor hover */
 }
 
+/* Hover effect voor Submit Button */
 input[type="submit"]:hover {
-    background-color: #C9302C; /* Donkerder Rood bij hover */
+    background-color: var(--secondary-color); /* Goudkleurig bij hover */
 }
 
 /* Media Queries voor Responsiveness */

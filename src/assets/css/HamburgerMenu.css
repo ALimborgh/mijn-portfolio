@@ -1,4 +1,3 @@
-/* src/assets/css/HamburgerMenu.css */
 
 /* Stijlen voor de hamburgerknop */
 .hamburger-menu__button {
@@ -7,7 +6,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #D9534F; /* Primair Rood voor hamburger knop */
+    color: var(--secondary-color); /* Goud voor hamburger knop */
     position: fixed; /* Vaste positie aan de rechterkant */
     top: 15px; /* Afstand van de bovenkant van het scherm */
     right: 15px; /* Afstand van de rechterkant van het scherm */
@@ -16,7 +15,7 @@
 
 .hamburger-menu__button:hover,
 .hamburger-menu__button:focus {
-    color: #C9302C; /* Donkerder Rood bij hover en focus */
+    color: var(--primary-color); /* Diep Marineblauw bij hover en focus */
 }
 
 /* Stijlen voor het nav-menu */
@@ -25,7 +24,7 @@
     position: fixed; /* Vaste positie */
     top: 50px; /* Onder de hamburger knop */
     right: 15px; /* Afstand van de rechterkant van het scherm */
-    background-color: #ffffff; /* Wit voor de achtergrond van het menu */
+    background-color: var(--background-color-dark); /* Licht Grijs voor de achtergrond van het menu */
     border-radius: 8px;
     padding: 1rem;
     width: 200px; /* Verkleinde breedte van het menu */
@@ -52,7 +51,7 @@
 
 /* Links in het menu */
 .hamburger-menu__link {
-    color: #2C2C2C; /* Donker Grijs voor links */
+    color: var(--text-color); /* Donker Grijs voor links */
     text-decoration: none;
     display: block;
     padding: 0.5rem;
@@ -62,14 +61,14 @@
 /* Hover en focus voor links in het menu */
 .hamburger-menu__link:hover,
 .hamburger-menu__link:focus {
-    background-color: #F0F0F0; /* Lichtgrijs achtergrond bij hover en focus */
-    color: #0056b3; /* Blauw bij hover en focus */
+    background-color: var(--light-accent); /* Licht Grijsblauw achtergrond bij hover en focus */
+    color: var(--primary-color); /* Diep Marineblauw bij hover en focus */
 }
 
 /* Actieve link */
 .hamburger-menu__link--active {
     font-weight: bold;
-    color: #D9534F; /* Primair Rood voor actieve link */
+    color: var(--secondary-color); /* Goud voor actieve link */
 }
 
 /* Responsive breakpoints */
@@ -110,14 +109,14 @@
     }
 
     .hamburger-menu__link {
-        color: #ffffff; /* Witte tekst op grotere schermen */
-        background-color: #2C2C2C; /* Donker Grijs voor de achtergrond van de links */
+        color: var(--hero-text-color); /* Witte tekst op grotere schermen */
+        background-color: var(--background-color-dark); /* Donker Grijs voor de achtergrond van de links */
     }
 
     .hamburger-menu__link:hover,
     .hamburger-menu__link:focus {
         background-color: transparent; /* Geen achtergrondkleur op grotere schermen */
-        color: #D9534F; /* Primair Rood bij hover en focus op grotere schermen */
+        color: var(--secondary-color); /* Goud bij hover en focus op grotere schermen */
     }
 }
 

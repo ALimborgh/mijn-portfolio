@@ -1,9 +1,8 @@
-/* src/assets/css/Projects.css */
 
 /* Project Kaart */
 .project {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
+    background-color: var(--background-color-light); /* Achtergrondkleur van de kaart */
+    border: 1px solid var(--border-color); /* Randkleur van de kaart */
     border-radius: 8px; /* Kleine afgeronde hoeken voor een netter uiterlijk */
     padding: 1rem; /* Basispadding voor inhoud */
     margin-bottom: 1.5rem; /* Ruimte tussen projecten */
@@ -31,14 +30,18 @@
 .project-image .swiper {
     width: 100%;
     height: 200px; /* Instellen van een vaste hoogte voor de swiper */
+    background-color: var(--background-color-light); /* Achtergrondkleur van de swiper container */
 }
 
+/* Swiper Slide */
 .project-image .swiper-slide {
     display: flex;
     justify-content: center; /* Center de afbeelding in de slide */
     align-items: center; /* Center de afbeelding in de slide */
+    background-color: var(--background-color-light); /* Achtergrondkleur van elke slide */
 }
 
+/* Swiper Slide Afbeelding */
 .project-image .swiper-slide img {
     max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder wordt dan de swiper container */
     max-height: 100%; /* Zorg ervoor dat de afbeelding niet hoger wordt dan de swiper container */
@@ -47,64 +50,24 @@
     border-radius: 8px; /* Zelfde afgeronde hoeken als de kaart */
 }
 
-/* Project Titel */
-.project h2 {
-    font-family: 'Montserrat', sans-serif; /* Montserrat voor een moderne uitstraling */
-    font-size: 1.5rem; /* Aangepaste fontgrootte */
-    color: #333333; /* Donkergrijs voor de tekstkleur */
-    margin-bottom: 0.5rem;
-    line-height: 1.4; /* Verhoog de regelhoogte voor betere leesbaarheid */
+/* Swiper Navigatie Knoppen */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color); /* Kleur van de navigatieknoppen */
 }
 
-/* Hover Effecten voor Project Titel */
-.project h2:hover {
-    color: #D9534F; /* Rood voor de titel bij hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--accent-color); /* Kleur van de navigatieknoppen bij hover */
 }
 
-/* Project Beschrijving */
-.project p {
-    color: #5F5F5F; /* Blauwgrijs voor de tekst */
-    font-size: 1rem; /* Aangepaste tekstgrootte voor de beschrijving */
-    line-height: 1.6; /* Verhoog de leesbaarheid van de tekst */
-    margin-bottom: 0.75rem;
+/* Swiper Pagina Indicatie (dots) */
+.swiper-pagination-bullet {
+    background-color: var(--border-color); /* Kleur van de paginapunten */
 }
 
-/* Project Technologieën en Toepassingen */
-.project .technologies,
-.project .toepassingen {
-    display: flex;
-    flex-wrap: wrap; /* Zorgt ervoor dat items op meerdere regels passen */
-    gap: 0.5rem; /* Ruimte tussen items */
-}
-
-.project .technologies p,
-.project .toepassingen p {
-    background-color: #f0f0f0; /* Achtergrondkleur voor technologieën en toepassingen */
-    border-radius: 4px; /* Afgeronde hoeken voor items */
-    padding: 0.25rem 0.5rem; /* Padding binnen items */
-    font-size: 0.875rem; /* Kleinere tekstgrootte voor items */
-    color: #333333; /* Donkergrijs voor de tekstkleur */
-}
-
-/* Project Link */
-.project a {
-    color: #D9534F; /* Rood voor de links */
-    font-weight: bold; /* Maak de link vetgedrukt */
-    text-decoration: none; /* Verwijder standaard onderstreping */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Basis overgangseffecten voor kleur en onderstreping */
-}
-
-/* Hover Effecten voor Project Link */
-.project a:hover {
-    color: #C9302C; /* Donkerder Rood bij hover */
-    text-decoration: underline; /* Onderstreep de link bij hover */
-}
-
-/* Swiper Carrousel */
-.swiper-slide {
-    display: flex;
-    justify-content: center; /* Center de afbeelding in de slide */
-    align-items: center; /* Center de afbeelding in de slide */
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color); /* Kleur van de actieve paginapunt */
 }
 
 /* Modal */
@@ -119,27 +82,28 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .modal-content {
-    background: white;
+}
+
+.modal-content {
+    background: var(--background-color-light); /* Achtergrondkleur van de modal */
     padding: 20px;
     border-radius: 8px;
     position: relative;
     max-width: 90%;
     max-height: 100%;
     overflow: auto;
-  }
-  
-  .modal-content img {
+}
+
+.modal-content img {
     max-width: 100%;
-    overflow: auto;
     max-height: 90%;
-  }
-  
-  button {
+    height: auto;
+}
+
+/* Button in modal */
+button {
     margin-top: 10px;
-  }
+}
 
 /* Media Queries voor Responsiveness */
 @media (max-width: 768px) {

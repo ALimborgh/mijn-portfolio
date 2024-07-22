@@ -30,7 +30,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="footer-links">
-          <h3>Snelkoppelingen</h3>
+          <h3>Direct naar</h3>
           <ul>
             <li><Link to="/"  duration={500} onClick={scrollToTop}>Home</Link></li>
             <li><Link to="about" duration={500} onClick={scrollToTop}>Over mij</Link></li>

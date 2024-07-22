@@ -1,12 +1,11 @@
-/* src/assets/css/AboutMe.css */
-
+/* Algemeen Over Mij Stijl */
 .about-content {
     display: flex;
     align-items: center;
     gap: 2rem;
     padding: 1.5rem; /* Reductie van padding voor eenvoudiger ontwerp */
-    background-color: #F8F9FA; /* Lichte achtergrondkleur voor contrast */
-    border-radius: 8px; /* Minder ronde hoeken voor een subtiele uitstraling */
+    background-color: var(--background-color-light); /* Lichtgrijze achtergrondkleur voor contrast */
+    border-radius: 8px; /* Subtiele afgeronde hoeken */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     transition: box-shadow 0.3s ease; /* Overgangseffect voor box-shadow */
     opacity: 0; /* Begin onzichtbaar */
@@ -18,7 +17,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Verhoogde schaduw bij hover */
 }
 
-/* Verwijderd hover-effect op about-content */
+/* Profielafbeelding */
 .profile-img {
     border-radius: 50%;
     width: 200px;
@@ -26,7 +25,7 @@
     object-fit: cover;
 }
 
-/* Verwijderd hover-effect op profile-img */
+/* Over Mij Tekst */
 .about-text {
     max-width: 600px; /* Beperk de breedte van de tekst voor betere leesbaarheid */
 }
@@ -34,31 +33,17 @@
 .about-text h2 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor kopteksten */
     font-size: 2rem;
-    color: #D9534F; /* Rood voor de koptekst */
+    color: var(--primary-color); /* Primair kleur voor de koptekst */
     margin-bottom: 1rem;
     text-align: center; /* Centreer de koptekst */
 }
 
 .about-text p {
-    color: #5F5F5F; /* Blauwgrijs voor tekst */
+    color: var(--text-color); /* Donkergrijze kleur voor tekst */
     margin-bottom: 1rem;
     line-height: 1.6; /* Verhoog de leesbaarheid van de tekst */
     font-size: 1rem; /* Zorg ervoor dat de tekst goed leesbaar is */
     text-align: left; /* Tekst uitgelijnd naar links */
-}
-
-.about-text a {
-    color: #D9534F; /* Rood voor links */
-    font-weight: bold; /* Maak links vetgedrukt */
-    text-decoration: none; /* Verwijder standaard onderstreping */
-    transition: color 0.3s ease; /* Voeg overgangseffect toe voor kleur */
-}
-
-/* Hover en focus voor links */
-.about-text a:hover,
-.about-text a:focus {
-    color: #C9302C; /* Donkerder Rood bij hover en focus */
-    text-decoration: underline; /* Onderstreep links bij hover en focus */
 }
 
 /* Animaties */

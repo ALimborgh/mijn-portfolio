@@ -1,10 +1,9 @@
-/* src/assets/css/Resume.css */
 
-/* Sectie */
+/* Sectie Stijl */
 section {
     margin-bottom: 2rem;
     padding: 1.5rem; /* Iets kleinere padding voor een strakker ontwerp */
-    background-color: #F8F9FA; /* Lichtgrijze achtergrond voor sectie */
+    background-color: var(--light-background); /* Lichtgrijze achtergrond voor sectie */
     border-radius: 8px; /* Iets kleinere afgeronde hoeken voor eenvoudiger ontwerp */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Basis overgangseffecten */
@@ -12,7 +11,7 @@ section {
 
 /* Hover Effecten voor Sectie */
 section:hover {
-    background-color: #E9ECEF; /* Iets donkerder grijs bij hover */
+    background-color: var(--light-accent); /* Iets donkerder grijs bij hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Vergroot de schaduw bij hover */
 }
 
@@ -20,7 +19,7 @@ section:hover {
 section h2 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor titels */
     font-size: 1.75rem; /* Aangepaste fontgrootte voor meer balans */
-    color: #333; /* Donkergrijs voor de tekstkleur */
+    color: var(--text-color-dark); /* Donkergrijs voor de tekstkleur */
     margin-bottom: 1rem;
     position: relative; /* Nodig voor het onderstrepingseffect */
 }
@@ -33,7 +32,7 @@ section h2::after {
     bottom: -5px;
     width: 50px; /* Breedte van de lijn */
     height: 3px; /* Dikte van de lijn */
-    background-color: #D9534F; /* Rood voor accentkleur */
+    background-color: var(--primary-color); /* Marineblauw voor accentkleur */
     border-radius: 2px; /* Ronde hoeken voor de lijn */
 }
 
@@ -46,8 +45,8 @@ ul {
 
 /* Lijst Items */
 li {
-    background-color: #fff; /* Witte achtergrondkleur voor items */
-    border: 1px solid #ddd;
+    background-color: var(--background-color-light); /* Witte achtergrondkleur voor items */
+    border: 1px solid var(--border-color); /* Randkleur */
     border-radius: 8px; /* Iets afgeronde hoeken voor de items */
     padding: 0.75rem; /* Iets kleinere padding voor een strakker ontwerp */
     margin-bottom: 0.5rem; /* Ruimte tussen de items */
@@ -56,7 +55,7 @@ li {
 
 /* Hover Effecten voor Lijst Items */
 li:hover {
-    background-color: #F1F3F5; /* Iets donkerder bij hover */
+    background-color: var(--light-accent); /* Iets donkerder bij hover */
     transform: translateY(-2px); /* Verhoog het item bij hover */
 }
 
@@ -64,29 +63,15 @@ li:hover {
 section h3 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor subtitels */
     font-size: 1.125rem; /* Aangepaste fontgrootte voor subtitels */
-    color: #D9534F; /* Rood voor subtitels */
+    color: var(--primary-color); /* Marineblauw voor subtitels */
     margin-bottom: 0.5rem;
 }
 
 /* Paragrafen in de sectie */
 section p {
-    color: #5F5F5F; /* Blauwgrijs voor de tekst */
+    color: var(--text-color-light); /* Lichter grijze tekstkleur */
     line-height: 1.5; /* Verhoog de leesbaarheid van de tekst */
     margin-bottom: 1rem;
-}
-
-/* Links in de sectie */
-section a {
-    color: #007BFF; /* Blauw voor de links */
-    text-decoration: none;
-    font-weight: bold; /* Vetgedrukt voor zichtbaarheid */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Basis overgangseffecten */
-}
-
-/* Hover Effecten voor Links */
-section a:hover {
-    color: #0056b3; /* Donkerder blauw bij hover */
-    text-decoration: underline; /* Onderstreep de link bij hover */
 }
 
 /* Media Queries voor Responsiveness */

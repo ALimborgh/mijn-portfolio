@@ -3,6 +3,25 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
+/* Kleurenpalet */
+:root {
+    --primary-color: #003366; /* Diep Marineblauw */
+    --secondary-color: #FFD700; /* Goud */
+    --accent-color: #333333; /* Donker Grijs */
+    --light-accent: #E6E9ED; /* Licht Grijsblauw */
+    --text-color: #333333; /* Tekstkleur */
+    --text-color-light: #5f5f5f; /* Lichter grijze tekstkleur */
+    --text-color-dark: #444444; /* Donkergrijze tekstkleur */
+    --background-color: #F2F2F2; /* Achtergrondkleur */
+    --background-color-light: #ffffff; /* Licht achtergrondkleur */
+    --background-color-dark: #4d4d4d; /* Donker achtergrondkleur */
+    --border-color: #ddd; /* Randkleur */
+    --hover-color: #FFD700; /* Hover kleur */
+    --hero-text-color: #fff; /* Witte tekst voor Hero */
+    --hero-background: #006699; /* Lichtere Blauw voor Hero */    
+    --hero-hover-background: #12518f; /* Diep Marineblauw voor Hero bij hover */
+}
+
 /* Basis Reset en Normale Stijlen */
 * {
     margin: 0;
@@ -13,22 +32,10 @@
 html, body {
     font-family: 'Roboto', sans-serif; /* Standaard font voor tekst */
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4d0; /* Lichtgrijze achtergrondkleur */
+    color: var(--text-color-primary);
+    background-color: var(--background-color); 
     overflow-x: hidden; /* Voorkom horizontaal scrollen */
     scroll-behavior: smooth; /* Zorg ervoor dat scrollen soepel is */
-}
-
-/* Link Hover Animatie */
-a {
-    text-decoration: none;
-    color: inherit; /* Zorg ervoor dat links de kleur van de tekst erft */
-    transition: color 0.3s ease; /* Overgangseffect voor kleur */
-}
-
-a:hover {
-    text-decoration: underline; /* Onderstreep links bij hover */
-    color: #0056b3; /* Donkerder blauw bij hover */
 }
 
 /* Basis voor knoppen */
@@ -39,12 +46,12 @@ button {
     font-family: inherit;
     font-size: 1rem;
     font-weight: bold;
-    color: #C9302C; /* Button kleur */
+    color: var(--secondary-color); /* Button kleur */
     transition: color 0.3s ease; /* Overgangseffect voor kleur */
 }
 
 button:hover {
-    color: #D9534F; /* Button kleur bij hover */
+    color: var(--hover-color); /* Button kleur bij hover */
 }
 
 /* Basis voor secties */
@@ -56,8 +63,8 @@ main {
 
 /* Hero Sectie */
 .hero {
-    background-color: #D9534F; /* Rood als achtergrondkleur */
-    color: #fff;
+    background-color: var(--hero-background); /* Lichtere Blauw als achtergrondkleur */
+    color: var(--hero-text-color); /* Witte tekst */
     padding: 2rem 1.5rem; /* Aangepaste padding */
     text-align: center;
     border-radius: 8px; /* Iets minder ronde hoeken */
@@ -66,6 +73,11 @@ main {
     opacity: 0; /* Begin onzichtbaar */
     transform: translateY(10px); /* Begin 10px lager */
     animation: fadeInUp 0.8s forwards; /* Kortere animatie */
+}
+
+.hero:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Verhoog de schaduw bij hover */
+    background-color: var(--hero-hover-background); /* Diep Marineblauw bij hover */
 }
 
 /* Hero Inhoud Animatie */
@@ -84,47 +96,33 @@ main {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor hoofdtitels */
     font-size: 2.5rem; /* Aangepaste grootte */
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Licht tekstschaduw voor leesbaarheid */
 }
 
 .hero p {
     font-size: 1rem; /* Aangepaste tekstgrootte */
-}
-
-.hero a {
-    display: inline-block;
-    background-color: #fff; /* Witte achtergrondkleur voor de knop */
-    color: #D9534F; /* Rood voor de tekst van de knop */
-    padding: 0.5rem 1rem;
-    border-radius: 4px; /* Kleinere hoeken */
-    border: 2px solid #D9534F; /* Rood kader voor de knop */
-    font-size: 0.875rem; /* Kleinere tekstgrootte */
-    text-decoration: none; /* Verwijder standaard onderstreping */
-    margin-top: 1rem;
-}
-
-.hero a:hover {
-    background-color: #D9534F; /* Achtergrondkleur bij hover */
-    color: #fff; /* Tekstkleur bij hover */
+    color: var(--hero-text-color); /* Witte tekst */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Licht tekstschaduw voor leesbaarheid */
 }
 
 /* Hoofdtitel */
 h1, h2 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor kopteksten */
-    color: #2C2C2C;
+    color: var(--text-color-primary); /* Gebruik tekstkleur primaire */
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat voor subtitels */
-    color: #C9302C; /* Donkerder Rood voor subtitels */
+    color: var(--secondary-color); /* Goud voor subtitels */
 }
 
 h1:hover, h2:hover, h3:hover {
-    color: #D9534F; /* Rood bij hover */
+    color: var(--hover-color); /* Goud bij hover */
 }
 
 h2 {
     font-size: 1.75rem; /* Iets kleinere titel voor een moderne uitstraling */
-    border-bottom: 2px solid #D9534F; /* Dunner Rood voor accentkleur */
+    border-bottom: 2px solid var(--secondary-color); /* Dunner Goud voor accentkleur */
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -136,7 +134,7 @@ h3 {
 
 /* Paragrafen */
 p {
-    color: #5F5F5F; /* Blauwgrijs voor tekst */
+    color: var(--text-color-primary); /* Hoofd Tekstkleur */
     margin-bottom: 1rem;
 }
 
@@ -162,19 +160,19 @@ input, textarea {
     width: 100%;
     padding: 0.75rem; /* Verhoog padding voor meer ruimte */
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--light-accent);
     border-radius: 4px; /* Kleinere hoeken */
     font-size: 1rem; /* Zorg ervoor dat de tekst leesbaar is */
 }
 
 input:focus, textarea:focus {
-    border-color: #D9534F; /* Rood bij focus */
+    border-color: var(--primary-color); /* Diep Marineblauw bij focus */
     outline: none; /* Verwijder standaard focus outline */
 }
 
 /* Submit Knoppen */
 input[type="submit"] {
-    background-color: #D9534F; /* Rood voor submit knoppen */
+    background-color: var(--primary-color); /* Diep Marineblauw voor submit knoppen */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -186,27 +184,28 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #C9302C; /* Donkerder Rood bij hover */
+    background-color: var(--hover-color); /* Goud bij hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Verhoog de schaduw bij hover */
+}
+
+/* Links */
+.link, a, Link{
+    color: var(--primary-color); /* Diep Marineblauw voor links */
+    text-decoration: none; /* Verwijder onderstreping */
+    transition: color 0.3s ease; /* Overgangseffect voor kleur */
+}
+
+.link:hover, a:hover, Link:hover {
+    color: var(--hover-color); /* Goud bij hover */
+    text-decoration: underline; /* Onderstreping bij hover */
 }
 
 /* Footer */
 footer {
-    background-color: #2C2C2C; /* Donker Grijs */
+    background-color: var(--accent-color); /* Donker Grijs */
     color: #fff; /* Witte tekst */
     padding: 1.5rem; /* Aangepaste padding */
     text-align: center;
-}
-
-footer a {
-    color: #D9534F; /* Rood voor footer links */
-    font-weight: bold; /* Maak links vetgedrukt */
-    transition: color 0.3s ease; /* Overgangseffecten voor kleur */
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: #C9302C; /* Donkerder Rood bij hover */
 }
 
 .footer-content {
@@ -238,8 +237,8 @@ footer a:hover {
 
 .footer-links ul li {
     margin-bottom: 0.5rem;
-    background-color: #2C2C2C; /* Donker Grijs voor links */
-    border-color: #2C2C2C; /* Donker Grijs voor links */
+    background-color: var(--background-color-dark); /* Donker Grijs voor links */
+    border-color: var(--background-color-dark); /* Donker Grijs voor links */
     padding: 0.5rem;
 }
 
@@ -260,8 +259,8 @@ footer a:hover {
 }
 
 .featured-projects .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--background-color);
+    border: 1px solid var(--light-accent); /* Licht Grijsblauw voor randen */
     border-radius: 4px; /* Kleinere hoeken */
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Kleinere schaduw voor diepte */
@@ -272,15 +271,6 @@ footer a:hover {
 .featured-projects .card:hover {
     transform: translateY(-3px); /* Verhoog de kaart bij hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Zachte schaduw bij hover */
-}
-
-.featured-projects .card a {
-    color: #D9534F; /* Rood voor links */
-    transition: color 0.3s ease; /* Overgangseffect voor kleur */
-}
-
-.featured-projects .card a:hover {
-    color: #C9302C; /* Donkerder Rood bij hover */
 }
 
 /* Media Queries voor Responsiveness */
@@ -331,7 +321,7 @@ footer a:hover {
 
 @media (max-width: 576px) {
     body {
-        font-size: 0.875rem; /* Kleinere tekstgrootte */
+        font-size: 1rem; /* Grotere tekstgrootte voor leesbaarheid op mobiele schermen */
     }
 
     .hero {
@@ -345,5 +335,21 @@ footer a:hover {
     .footer-social img {
         width: 18px; /* Aangepaste grootte */
         height: 18px; /* Aangepaste grootte */
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Grotere titels op kleine schermen */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Grotere subtitels op kleine schermen */
+    }
+
+    h3 {
+        font-size: 1rem; /* Grotere subtitels op kleine schermen */
+    }
+
+    p {
+        font-size: 1rem; /* Grotere tekst op kleine schermen */
     }
 }

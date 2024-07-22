@@ -1,12 +1,10 @@
-/* src/assets/css/Footer.css */
-
 /* Footer-stijlen */
 footer {
-  background-color: #2C2C2C; /* Donkergrijs voor de footer */
-  color: #FFFFFF; /* Witte tekst in de footer */
+  background-color: var(--background-color-dark); /* Donkergrijs voor de footer */
+  color: var(--text-color-light); /* Lichte tekstkleur in de footer */
   padding: 1rem; /* Verlaagde padding voor een subtieler ontwerp */
   font-family: Arial, sans-serif;
-  border-top: 2px solid #D9534F; /* Dunner Rood accent bovenaan de footer */
+  border-top: 2px solid var(--primary-color); /* Dunne lijn met primaire kleur bovenaan de footer */
 }
 
 /* Footer Content Styling */
@@ -15,6 +13,7 @@ footer {
   flex-direction: column;
   gap: 1rem; /* Ruimte tussen de secties */
   align-items: center; /* Centreer de inhoud */
+  color: var(--hero-text-color); /* Lichte tekstkleur in de footer */
 }
 
 /* Algemene styling voor footer-secties */
@@ -25,7 +24,7 @@ footer {
 
 /* Footer Links */
 .footer-link, .footer-links a {
-  color: #D9534F; /* Primair Rood voor links */
+  color: var(--secondary-color); /* Goud voor links */
   text-decoration: none;
 }
 
