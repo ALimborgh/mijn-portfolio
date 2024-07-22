@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
+import ProjectDetail from './components/ProjectDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" element={<Home />} /> 
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail/>} /> {/* Dynamische route */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<AboutMe />} />
         </Routes>
