@@ -144,9 +144,12 @@
 }
 
 .modal-content img {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 90%;
     height: auto;
+    border-radius: 8px;
+    display: flex;
+    margin: auto;
 }
 
 /* Button in modal */

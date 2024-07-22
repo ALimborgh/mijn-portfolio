@@ -1,4 +1,3 @@
-// src/components/Projects.js
 import React, { useState, useCallback } from 'react';
 import '../assets/css/Projects.css';
 import projectsData from '../data/ProjectsData';
@@ -10,10 +9,10 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState('');
+  const [currentImages, setCurrentImages] = useState([]); // Meerdere afbeeldingen in modal
 
-  const handleImageClick = useCallback((imagePath) => {
-    setCurrentImage(imagePath);
+  const handleImageClick = useCallback((imagePaths) => {
+    setCurrentImages(imagePaths);
     setIsModalOpen(true);
   }, []);
 
@@ -43,7 +42,7 @@ const Projects = () => {
                       <img
                         src={path}
                         alt={`${index + 1}`}
-                        onClick={() => handleImageClick(path)}
+                        onClick={() => handleImageClick(project.imagePaths)}
                         style={{ cursor: 'pointer' }}
                       />
                     </SwiperSlide>
@@ -71,18 +70,31 @@ const Projects = () => {
           </div>
         </div>
       ))}
-      <ImageModal isOpen={isModalOpen} src={currentImage} onClose={handleCloseModal} />
+      <ImageModal isOpen={isModalOpen} images={currentImages} onClose={handleCloseModal} />
     </main>
   );
 };
 
-const ImageModal = React.memo(({ isOpen, src, onClose }) => {
+const ImageModal = React.memo(({ isOpen, images, onClose }) => {
   if (!isOpen) return null;
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <img src={src} alt="Expanded view" />
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Pagination, Navigation]}
+          className="swiper-modal"
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index} className="swiper-slide">
+              <img src={image} alt={`Slide ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <button onClick={onClose}>Close</button>
       </div>
     </div>
