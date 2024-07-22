@@ -3,7 +3,7 @@
 section {
     margin-bottom: 2rem;
     padding: 1.5rem; /* Iets kleinere padding voor een strakker ontwerp */
-    background-color: var(--light-background); /* Lichtgrijze achtergrond voor sectie */
+    background-color: var(--background-color); /* Lichtgrijze achtergrond voor sectie */
     border-radius: 8px; /* Iets kleinere afgeronde hoeken voor eenvoudiger ontwerp */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor diepte */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Basis overgangseffecten */

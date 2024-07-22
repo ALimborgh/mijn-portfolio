@@ -37,16 +37,13 @@ const Home = () => {
 
       <section className="about-me">
         <h2>Over mij</h2>
-        <p>Ik ben een enthousiaste professional met een passie voor technologie en probleemoplossing. 
-          <Link className="link" to="about" onClick={scrollToTop}>Lees meer over mij</Link>
+        <p>Ik ben een enthousiaste professional met een passie voor technologie en probleemoplossing.<Link className="link" to="about" onClick={scrollToTop}> Lees meer over mij</Link>
         </p>
       </section>
 
       <section className="resume">
         <h2>Bekijk Mijn CV</h2>
-        <p>Benieuwd naar mijn ervaring en vaardigheden? 
-          <Link className="link" to="resume" onClick={scrollToTop}>Bekijk mijn CV</Link> 
-          voor meer informatie.
+        <p>Benieuwd naar mijn ervaring en vaardigheden?<Link className="link" to="resume" onClick={scrollToTop}> Bekijk mijn CV</Link> voor meer informatie.
         </p>
       </section>
     </main>

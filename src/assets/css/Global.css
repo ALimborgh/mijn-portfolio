@@ -15,6 +15,7 @@
     --background-color: #F2F2F2; /* Achtergrondkleur */
     --background-color-light: #ffffff; /* Licht achtergrondkleur */
     --background-color-dark: #4d4d4d; /* Donker achtergrondkleur */
+    --background-color-main: #cecece; /* Hoofdachtergrondkleur */
     --border-color: #ddd; /* Randkleur */
     --hover-color: #FFD700; /* Hover kleur */
     --hero-text-color: #fff; /* Witte tekst voor Hero */
@@ -33,7 +34,7 @@ html, body {
     font-family: 'Roboto', sans-serif; /* Standaard font voor tekst */
     line-height: 1.6;
     color: var(--text-color-primary);
-    background-color: var(--background-color); 
+    background-color: var(--background-color-main); /* Hoofdachtergrondkleur */
     overflow-x: hidden; /* Voorkom horizontaal scrollen */
     scroll-behavior: smooth; /* Zorg ervoor dat scrollen soepel is */
 }
@@ -254,8 +255,11 @@ footer {
 }
 
 /* Featured Projects */
-.featured-projects {
+.featured-projects,
+.about-me,
+.resume {
     margin-bottom: 2rem;
+    background-color: var(--border-color); /* Randkleur voor sectie */
 }
 
 .featured-projects .card {
