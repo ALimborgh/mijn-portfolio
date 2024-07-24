@@ -12,7 +12,7 @@ const Home = () => {
     });
   };
 
-  const projectsToDisplay = projectsData.slice(0, 2);
+  const projectsToDisplay = projectsData.slice(-2);
 
   return (
     <main>
