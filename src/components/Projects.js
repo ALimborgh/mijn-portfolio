@@ -33,7 +33,7 @@ const Projects = () => {
                   spaceBetween={10}
                   slidesPerView={1}
                   pagination={{ clickable: true }}
-                  navigation
+                  navigation= {true}
                   modules={[Pagination, Navigation]}
                   className="swiper"
                 >
@@ -85,13 +85,13 @@ const ImageModal = React.memo(({ isOpen, images, onClose }) => {
           spaceBetween={10}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          navigation
+          navigation= {true}	
           modules={[Pagination, Navigation]}
           className="swiper-modal"
         >
-          {images.map((image, index) => (
+          {images.map((path, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <img src={image} alt={`Slide ${index + 1}`} />
+              <img src={path} alt={`Slide ${index + 1}`} />
             </SwiperSlide>
           ))}
         </Swiper>
