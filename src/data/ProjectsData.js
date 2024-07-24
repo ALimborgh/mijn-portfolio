@@ -7,6 +7,11 @@ import advancedReactProject3 from '../assets/images/Advanced React Project 3.png
 import advancedReactProject4 from '../assets/images/Advanced React Project 4.png';
 import advancedReactProject5 from '../assets/images/Advanced React Project 5.png';
 import cliProject from '../assets/images/CLI Project.png';
+import webshopProject from '../assets/images/BetsyWebshop Project.png';
+import webshopProject2 from '../assets/images/BetsyWebshop Project 2.png';
+import webshopProject3 from '../assets/images/BetsyWebshop Project 3.png';
+import webshopProject4 from '../assets/images/BetsyWebshop Project 4.png';
+import webshopProject5 from '../assets/images/BetsyWebshop Project 5.png';
 
 const projectsData = [
     {
@@ -45,6 +50,15 @@ const projectsData = [
       imagePaths: [cliProject],
       link: 'https://github.com/ALimborgh/SuperPy',
     },
+    {
+      id: 4,
+      title: 'Webshop Project (Schoolopdracht)',
+      description: "De code definieert een webwinkeltoepassing met behulp van de Peewee ORM en SQLite. Het bevat modellen voor gebruikers, producten, tags, product-tags-relaties en transacties. Gebruikers kunnen producten bezitten en beheren, waarbij producten een naam, beschrijving, prijs, hoeveelheid in voorraad en een actieve status hebben. Tags kunnen aan producten worden gekoppeld om ze te categoriseren. Transacties houden bij wanneer gebruikers producten kopen, inclusief de hoeveelheid en totale prijs. Daarnaast zijn er functies om producten te zoeken op naam of beschrijving, producten van een specifieke gebruiker op te sommen, producten per tag op te sommen, producten toe te voegen aan de catalogus van een gebruiker, producten van een gebruiker te verwijderen, de voorraad van een product bij te werken, en een product te kopen waarbij een transactie wordt geregistreerd. Er is ook een functie om de database te vullen met voorbeeldgegevens, waaronder het aanmaken van gebruikers, producten, tags en transacties. Logging wordt gebruikt om informatie en fouten bij te houden.",
+      Toepassingen: ['E-commerce', 'Productbeheer', 'Gebruikersbeheer', 'Transactiebeheer', 'Voorraadbeheer', 'Gegevensanalyse', 'Gebruik in trainingsomgevingen', 'Productzoekopdrachten', 'Gebruikersspecifiek productbeheer', 'Productcategorisatie en -tagging', 'Voorraadbeheer', 'Productverwijdering', 'Voorraadaanpassing', 'Transactiebeheer en aankoopregistratie', 'Database-initialisatie en -populatie', 'Foutlogging en informatiebeheer'],
+      technologies: ['Peewee ORM', 'SQLite', 'Python', 'Logging', 'SQL'],
+      imagePaths: [webshopProject, webshopProject2, webshopProject3, webshopProject4, webshopProject5],
+      link: 'https://github.com/ALimborgh/Betsy-Webshop',
+    }
   ];
   
   export default projectsData;
