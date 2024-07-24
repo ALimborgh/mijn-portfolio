@@ -12,6 +12,12 @@ import webshopProject2 from '../assets/images/BetsyWebshop Project 2.png';
 import webshopProject3 from '../assets/images/BetsyWebshop Project 3.png';
 import webshopProject4 from '../assets/images/BetsyWebshop Project 4.png';
 import webshopProject5 from '../assets/images/BetsyWebshop Project 5.png';
+import CICDProject from '../assets/images/CI,CD Project.png';
+import CICDProject2 from '../assets/images/CI,CD Project 2.png';
+import CICDProject3 from '../assets/images/CI,CD Project 3.png';
+import CICDProject4 from '../assets/images/CI,CD Project 4.png';
+import CICDProject5 from '../assets/images/CI,CD Project 5.png';
+import CICDProject6 from '../assets/images/CI,CD Project 6.png';
 
 const projectsData = [
     {
@@ -58,7 +64,16 @@ const projectsData = [
       technologies: ['Peewee ORM', 'SQLite', 'Python', 'Logging', 'SQL'],
       imagePaths: [webshopProject, webshopProject2, webshopProject3, webshopProject4, webshopProject5],
       link: 'https://github.com/ALimborgh/Betsy-Webshop',
-    }
+    },
+    {
+      id: 5,
+      title: 'CI/CD Project (Schoolopdracht)',
+      description: "De GitHub Actions workflow Test and Deploy automatiseert het test- en uitrolproces voor een Python-project. De workflow bestaat uit verschillende jobs die op elkaar volgen. De eerste job voert tests uit op een Ubuntu-omgeving door de code uit te checken, Python 3.8 in te stellen, afhankelijkheden te installeren en tests te draaien met pytest. Na succesvolle tests wordt de tweede job uitgevoerd, die de omgeving voorbereidt voor uitrol door een SSH-sleutel te installeren en toe te voegen aan de bekende hosts. De derde job kopieert bestanden naar de server met rsync en zorgt ervoor dat de server toegankelijk is via SSH. De vierde job voert de daadwerkelijke uitrol uit op de server, waarbij de applicatie wordt geïnstalleerd en herstart. Ten slotte genereert de vijfde job een statusrapport door de status van de applicatie en recente logs op de server te controleren en te rapporteren. Elke job is afhankelijk van de voltooiing van de voorgaande jobs, wat zorgt voor een gestructureerde en ordelijke uitrol.",
+      Toepassingen: ['Code testen', 'Python afhankelijkheden installeren', 'Tests uitvoeren met pytest', 'SSH-toegang instellen', 'Bestanden naar server kopiëren', 'Applicatie op server installeren', 'Applicatie herstarten', 'Statusrapporten genereren', 'Server logs controleren', 'Deployment automatiseren', 'Configuratiebeheer', 'Omgevingsinstellingen controleren', 'Deployment opvolging en verificatie', 'Testresultaten analyseren', 'Serverstatus monitoren'],
+      technologies: ['GitHub Actions', 'Python', 'pytest', 'rsync', 'SSH', 'Ubuntu', 'CI/CD', 'Deployment', 'Testen', 'Logging', 'Statusrapportage', 'Configuratiebeheer', 'actions/checkout@v2', 'actions/setup-python@v2', 'webfactory/ssh-agent@v0.5.3','systemctl', 'journalctl'],
+      imagePaths: [CICDProject, CICDProject2, CICDProject3, CICDProject4, CICDProject5, CICDProject6],
+      link: 'https://github.com/ALimborgh/CD',
+    },
   ];
   
   export default projectsData;
