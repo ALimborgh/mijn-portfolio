@@ -10,7 +10,7 @@
     --accent-color: #333333; /* Donker Grijs */
     --light-accent: #E6E9ED; /* Licht Grijsblauw */
     --text-color: #333333; /* Tekstkleur */
-    --text-color-light: #5f5f5f; /* Lichter grijze tekstkleur */
+    --text-color-light: #7d7b7b; /* Lichter grijze tekstkleur */
     --text-color-dark: #444444; /* Donkergrijze tekstkleur */
     --background-color: #F2F2F2; /* Achtergrondkleur */
     --background-color-light: #ffffff; /* Licht achtergrondkleur */
@@ -19,7 +19,7 @@
     --border-color: #ddd; /* Randkleur */
     --hover-color: #FFD700; /* Hover kleur */
     --hero-text-color: #fff; /* Witte tekst voor Hero */
-    --hero-background: #006699; /* Lichtere Blauw voor Hero */    
+    --hero-background: #006da4; /* Lichtere Blauw voor Hero */    
     --hero-hover-background: #12518f; /* Diep Marineblauw voor Hero bij hover */
 }
 
