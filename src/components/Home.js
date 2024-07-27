@@ -29,7 +29,7 @@ const Home = () => {
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <p>
-              Voor meer informatie<Link className="link" to={`/projects/${project.id}`} onClick={scrollToTop}> click hier.</Link>
+              Voor meer informatie<Link className="link" to={`/projects/${project.id}`} onClick={scrollToTop}> klik hier.</Link>
             </p>
           </div>
         ))}
