@@ -17,7 +17,7 @@ const Resume = () => {
           functies heb ik aangetoond dat ik niet alleen technisch bekwaam ben, maar ook een betrouwbare en inspirerende collega. Ik kijk
           ernaar uit om mijn expertise in te zetten en verder te ontwikkelen binnen een organisatie die innovatie en groei waardeert.
         </p>
-        <p>Wil je mij contacteren <Link to="/Contact"> click dan hier</Link> en vul het contact formulier in.</p>
+        <p>Wil je mij contacteren <Link to="/Contact"> klik dan hier</Link> en vul het contact formulier in.</p>
       </section>
 
       <section>
