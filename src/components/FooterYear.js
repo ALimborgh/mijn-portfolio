@@ -1,17 +1,12 @@
-import { useEffect } from 'react';
-import '../assets/css/FooterYear.css';
+import { Box, Text } from '@chakra-ui/react';
 
 const FooterYear = () => {
   const currentYear = new Date().getFullYear();
-  useEffect(() => {  
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-      yearElement.textContent = `Adriaen Limborgh © ${currentYear}`;
-    }
-  }, [currentYear]);
 
   return (
-    <div id="year">Adriaen Limborgh © {currentYear} </div>
+    <Box as="footer" color="white" py={4} textAlign="center">
+      <Text id="year">Adriaen Limborgh © {currentYear}</Text>
+    </Box>
   );
 };
 
