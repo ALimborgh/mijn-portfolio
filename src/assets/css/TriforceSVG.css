@@ -1,24 +1,11 @@
-/* src/assets/css/Triforce.css */
 .triforce-svg {
-  fill: transparent;
-  stroke: #f0c000;
+  fill: #b5651d; /* Warm bruine kleur */
+  stroke: #8b4513; /* Donkerdere bruine rand */
   stroke-width: 2;
-  transition: transform 0.5s ease-in-out, fill 0.5s ease;
-  cursor: pointer;
+  transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-.triforce-triangle {
-  fill: #f0c000;
-  stroke: none;
-  transition: fill 0.5s ease;
-}
-
-/* Hover effect om de Triforce te laten groeien */
-.triforce-svg:hover {
-  transform: scale(1.2);
-}
-
-/* Hover effect om de kleur van de driehoeken te veranderen */
 .triforce-svg:hover .triforce-triangle {
-  fill: #e0a000;
+  fill: #f4a460; /* Lichtere warme kleur bij hover */
+  stroke: #a0522d; /* Lichtere randkleur bij hover */
 }
