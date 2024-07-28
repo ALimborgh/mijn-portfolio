@@ -56,7 +56,9 @@ const Projects = () => {
                         cursor="pointer"
                         onClick={() => handleImageClick(project.imagePaths)}
                         borderRadius="md"
-                        maxW="600px" // Adjust this value as needed
+                        maxW={{ base: '100%', md: '600px' }} // Responsive max width
+                        maxH={{ base: '200px', md: '400px' }} // Responsive max height
+                        objectFit="cover"
                       />
                     </SwiperSlide>
                   ))}
