@@ -94,7 +94,7 @@ const projectsData = [
       ],
       technologies: ['React', 'Chakra UI', 'JavaScript', 'React-router', 'CSS'],
       imagePaths: [PortfolioWebsite],
-      link: 'https://github.com/ALimborgh/Portfolio-Website',
+      link: 'https://github.com/ALimborgh/mijn-portfolio',
   }
   ];
   
