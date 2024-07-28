@@ -18,6 +18,7 @@ import CICDProject3 from '../assets/images/CI,CD Project 3.png';
 import CICDProject4 from '../assets/images/CI,CD Project 4.png';
 import CICDProject5 from '../assets/images/CI,CD Project 5.png';
 import CICDProject6 from '../assets/images/CI,CD Project 6.png';
+import PortfolioWebsite from '../assets/images/Portfolio Website.png';
 
 const projectsData = [
     {
@@ -74,6 +75,27 @@ const projectsData = [
       imagePaths: [CICDProject, CICDProject2, CICDProject3, CICDProject4, CICDProject5, CICDProject6],
       link: 'https://github.com/ALimborgh/CD',
     },
+    {
+      id: 6,
+      title: 'Mijn Portfolio Website',
+      description: `Deze website dient als mijn persoonlijke portfolio waar ik mijn projecten, vaardigheden, en professionele ervaring presenteer. 
+      De site is zorgvuldig ontworpen en ontwikkeld met behulp van moderne webtechnologieën om een gebruiksvriendelijke en visueel aantrekkelijke ervaring te bieden. 
+      Het doel van de website is om mijn werk te tonen en een uitgebreid overzicht te geven van mijn capaciteiten aan potentiële werkgevers, klanten, en andere geïnteresseerden.
+      
+      De website is opgebouwd met React, een populaire JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces. React stelt me in staat om component-gebaseerde architectuur te gebruiken, waardoor de website modulair, herbruikbaar en gemakkelijk te onderhouden is. 
+      Chakra UI, een krachtige en toegankelijke componentbibliotheek voor React, wordt gebruikt voor het stylen van de website. Dit zorgt voor een moderne, consistente en responsieve gebruikersinterface die goed werkt op verschillende apparaten en schermformaten.
+      `,
+      Toepassingen: [
+          'Portfolio en CV presentatie', 
+          'Project showcase', 
+          'Navigatie en routing', 
+          'Responsief ontwerp', 
+          'Contact'
+      ],
+      technologies: ['React', 'Chakra UI', 'JavaScript', 'React-router', 'CSS'],
+      imagePaths: [PortfolioWebsite],
+      link: 'https://github.com/ALimborgh/Portfolio-Website',
+  }
   ];
   
   export default projectsData;
