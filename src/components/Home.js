@@ -58,14 +58,16 @@ const Home = () => {
         <Flex direction={{ base: 'column', md: 'row' }} align="center">
           <Image
             borderRadius="full"
-            boxSize="150px"
+            boxSize={{ base: '100px', md: '150px' }}
             src={profileImg}
             alt="Adriaen Limborgh"
             mb={{ base: 4, md: 0 }}
             mr={{ md: 8 }}
             boxShadow="lg"
+            objectFit="cover"
+            objectPosition="center"
           />
-          <VStack align="flex-start">
+          <VStack align="flex-start" spacing={4}>
             <Heading as="h2" size="xl" color="#D99152" fontWeight="bold">
               Over Mij
             </Heading>
@@ -111,6 +113,8 @@ const Home = () => {
                   src={project.imagePaths[0]}
                   alt={project.title}
                   mb={4}
+                  objectFit="cover"
+                  objectPosition="center"
                 />
                 <Heading as="h3" size="md" mb={2} color="#D99152" fontWeight="bold">
                   {project.title}
