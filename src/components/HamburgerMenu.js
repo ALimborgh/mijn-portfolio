@@ -1,55 +1,60 @@
 // src/components/HamburgerMenu.js
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../assets/css/HamburgerMenu.css';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { 
+  Box, 
+  IconButton, 
+  Drawer, 
+  DrawerBody, 
+  DrawerHeader, 
+  DrawerOverlay, 
+  DrawerContent, 
+  DrawerCloseButton, 
+  useDisclosure, 
+  VStack 
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 const HamburgerMenu = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
-
-  const toggleMenu = (event) => {
-    setMenuVisible(!menuVisible);
-    event.stopPropagation();
-  };
-
-  const closeMenu = (event) => {
-    if (!event.target.closest('#navMenu') && window.innerWidth <= 768) {
-      setMenuVisible(false);
-    }
-  };
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   const handleLinkClick = () => {
-    setMenuVisible(false); // Close the menu when a link is clicked
+    onClose(); // Close the drawer when a link is clicked
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setMenuVisible(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    document.addEventListener('click', closeMenu);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      document.removeEventListener('click', closeMenu);
-    };
-  }, []);
-
   return (
-    <>
-      <button className={`hamburger-menu__button ${menuVisible ? 'hide' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation">☰</button>
-      <nav id="navMenu" className={`hamburger-menu__nav ${menuVisible ? 'hamburger-menu__nav--show' : ''}`}>
-        <ul className="hamburger-menu__list">
-          <li className="hamburger-menu__item"><Link to="/" onClick={handleLinkClick} className="hamburger-menu__link">Home</Link></li>
-          <li className="hamburger-menu__item"><Link to="/about" onClick={handleLinkClick} className="hamburger-menu__link">Over Mij</Link></li>
-          <li className="hamburger-menu__item"><Link to="/projects" onClick={handleLinkClick} className="hamburger-menu__link">Projecten</Link></li>
-          <li className="hamburger-menu__item"><Link to="/resume" onClick={handleLinkClick} className="hamburger-menu__link">CV</Link></li>
-          <li className="hamburger-menu__item"><Link to="/contact" onClick={handleLinkClick} className="hamburger-menu__link">Contact</Link></li>
-        </ul>
-      </nav>
-    </>
+    <Box>
+      <IconButton
+        ref={btnRef}
+        icon={<HamburgerIcon />}
+        onClick={onOpen}
+        aria-label="Open menu"
+        variant="outline"
+        display={{ base: 'block', md: 'none' }}
+      />
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerBody>
+            <VStack align="start">
+              <RouterLink to="/" onClick={handleLinkClick}>Home</RouterLink>
+              <RouterLink to="/about" onClick={handleLinkClick}>Over Mij</RouterLink>
+              <RouterLink to="/projects" onClick={handleLinkClick}>Projecten</RouterLink>
+              <RouterLink to="/resume" onClick={handleLinkClick}>CV</RouterLink>
+              <RouterLink to="/contact" onClick={handleLinkClick}>Contact</RouterLink>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </Box>
   );
 };
 
