@@ -1,7 +1,6 @@
-// src/components/Contact.js
 import React from 'react';
 import emailjs from 'emailjs-com';
-import '../assets/css/Contact.css';
+import { Box, Button, FormControl, FormLabel, Input, Textarea, Heading, VStack } from '@chakra-ui/react';
 
 const Contact = () => {
   const sendEmail = (e) => {
@@ -10,31 +9,39 @@ const Contact = () => {
     emailjs.sendForm('service_bbrbc2m', 'template_13rrfgc', e.target, 'nYSePl5tMfJR0Wwam')
       .then((result) => {
           console.log(result.text);
-          alert('Message sent successfully!');
+          alert('Bericht succesvol verzonden!');
       }, (error) => {
           console.log(error.text);
-          alert('Failed to send the message, please try again.');
+          alert('Verzenden van bericht mislukt, probeer het opnieuw.');
       });
   };
 
   return (
-    <main>
-      <section>
-        <h1>Contact mij</h1>
+    <Box as="main" p={5} bg="orange.50">
+      <Heading as="h1" mb={6} color="orange.900">Contact mij</Heading>
+      <Box as="section" p={5} bg="white" borderRadius="md" boxShadow="md">
         <form onSubmit={sendEmail}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required /><br /><br />
-          
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required /><br /><br />
-          
-          <label htmlFor="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" cols="30" required></textarea><br /><br />
-          
-          <input type="submit" value="Submit" />
+          <VStack spacing={4} align="start">
+            <FormControl isRequired>
+              <FormLabel htmlFor="name" color="gray.700">Naam:</FormLabel>
+              <Input type="text" id="name" name="name" borderColor="orange.300" _focus={{ borderColor: 'orange.500' }} />
+            </FormControl>
+            
+            <FormControl isRequired>
+              <FormLabel htmlFor="email" color="gray.700">E-mail:</FormLabel>
+              <Input type="email" id="email" name="email" borderColor="orange.300" _focus={{ borderColor: 'orange.500' }} />
+            </FormControl>
+            
+            <FormControl isRequired>
+              <FormLabel htmlFor="message" color="gray.700">Bericht:</FormLabel>
+              <Textarea id="message" name="message" rows="5" borderColor="orange.300" _focus={{ borderColor: 'orange.500' }} />
+            </FormControl>
+            
+            <Button type="submit" colorScheme="orange" size="md">Verzenden</Button>
+          </VStack>
         </form>
-      </section>
-    </main>
+      </Box>
+    </Box>
   );
 }
 
