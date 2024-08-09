@@ -45,7 +45,7 @@ const Resume = () => {
           </Box>
           <Box mb={4}>
             <Heading as="h3" size="md" color="orange.800">Hogeschool van Arnhem en Nijmegen - Propedeuse Lerarenopleiding Wiskunde</Heading>
-            <Text color="gray.600">Juli 2020</Text>
+            <Text color="gray.600">Juli 2018</Text>
             <UnorderedList mt={2} color="gray.700">
               <ListItem>Propedeuse behaald met uitstekende resultaten.</ListItem>
             </UnorderedList>
